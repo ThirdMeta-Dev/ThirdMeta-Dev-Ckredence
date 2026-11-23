@@ -1,0 +1,122 @@
+/* Measured roles and responsive exceptions are documented in docs/homepage-ui-audit.md. */
+:root {
+  --brand: #0c93db;
+  --ink: #141414;
+  --navy: #092d43;
+  --blue: #006da6;
+  --text: #364d5b;
+  --line: #bdcbd2;
+  --pale: #f2f6f8;
+  --white: #fff;
+  --on-dark: #f4f9fc;
+  --accent-light: #93d8ff;
+  --action-fill: linear-gradient(
+    color-mix(in srgb, var(--brand), white 58%) 10.42%,
+    color-mix(in srgb, var(--brand), white 28%) 100%
+  );
+  --action-hover: linear-gradient(
+    color-mix(in srgb, var(--brand), white 70%),
+    color-mix(in srgb, var(--brand), white 18%)
+  );
+  --body-font: Inter, Arial, sans-serif;
+  --heading-font: Sora, Arial, sans-serif;
+  --italic-font: Instrument, Georgia, serif;
+  --body-size: 1rem;
+  --caption-size: 0.875rem;
+  --item-size: 1.25rem;
+  --section-display: 2.25rem;
+  --section-emphasis: 2.5rem;
+  --title-size: var(--section-display);
+  --accent-size: var(--section-emphasis);
+  --hero-size: 3.0625rem;
+  --hero-emphasis: 3.5625rem;
+  --heading-leading: 1.2;
+  --item-weight: 600;
+  --body-leading: 1.6;
+  --body-tracking: 0.01em;
+  --heading-tracking: 0.005em;
+  --hero-tracking: 0.24px;
+  --hero-accent-tracking: 0.28px;
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-28: 28px;
+  --space-30: 30px;
+  --space-35: 35px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-50: 50px;
+  --space-60: 60px;
+  --space-64: 64px;
+  --space-80: 80px;
+  --space-96: 96px;
+  --space-100: 100px;
+  --gutter: var(--space-16);
+  --container: 100%;
+  --grid-gap: var(--space-24);
+  --section-space: var(--space-60);
+  --feature-start: var(--space-96);
+  --profile-inset: var(--space-50);
+  --editorial-start: var(--space-100);
+  --editorial-gap: var(--space-50);
+  --card-inset: var(--space-20);
+  --control-radius: 8px;
+  --article-radius: 12px;
+  --card-radius: 16px;
+  --feature-radius: 20px;
+  --touch-target: 44px;
+  --action-height: 48px;
+  --hero-action-width: 280px;
+  --hero-action-height: 54px;
+  --hero-action-gap: 68px;
+  --portrait-width: 336px;
+  --mobile-header: 60px;
+  --control-motion: 150ms ease;
+}
+@media (min-width: 576px) {
+  :root {
+    --container: 540px;
+    --gutter: var(--space-12);
+  }
+}
+@media (min-width: 768px) {
+  :root {
+    --container: 720px;
+  }
+}
+@media (min-width: 992px) {
+  :root {
+    --container: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    --container: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  :root {
+    --container: 1320px;
+  }
+}
+@media (max-width: 768px) {
+  :root {
+    --hero-size: 2.25rem;
+    --hero-emphasis: 2.5rem;
+    --hero-action-height: 52px;
+  }
+}
+@media (max-width: 767px) {
+  :root {
+    --title-size: 2rem;
+    --accent-size: 2.25rem;
+    --section-space: var(--space-50);
+    --feature-start: var(--space-64);
+    --profile-inset: var(--space-40);
+    --editorial-start: var(--space-50);
+    --editorial-gap: var(--space-35);
+  }
+}
