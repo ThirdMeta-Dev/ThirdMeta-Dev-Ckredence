@@ -462,6 +462,9 @@
         }
       ],
       "policies": [
+        { "label": "PMS complaint report", "url": "https://ckredencewealth.com/complaint-dashboard" },
+        { "label": "RIA complaint report", "url": "https://ckredencewealth.com/complaint-dashboard-ria" },
+        { "label": "AIF complaint report", "url": "https://ckredencewealth.com/complaint-dashboard-aif" },
         {
           "label": "Cookies Policy",
           "url": "https://ckredencewealth.com/cookies-policy"

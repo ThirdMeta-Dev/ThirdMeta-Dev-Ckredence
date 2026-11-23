@@ -7,7 +7,6 @@ import {
   Faq,
   Reviews,
   Support,
-  Reports,
   Footer,
 } from "./Investor.jsx";
 
@@ -396,10 +395,11 @@ export default function App() {
         <Community />
         <Faq />
         <Reviews />
-        <Support />
-        <Reports />
       </main>
-      <Footer />
+      <div className="page-close">
+        <Support />
+        <Footer />
+      </div>
     </>
   );
 }

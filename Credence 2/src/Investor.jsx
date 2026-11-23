@@ -182,30 +182,6 @@ export function Support() {
     </section>
   );
 }
-export function Reports() {
-  return (
-    <aside className="wrap reports" aria-label="Complaint reports">
-      <details>
-        <summary>
-          <Icon name="shield" />
-          <strong>Complaint reports</strong>
-          <Icon name="plus" />
-        </summary>
-        <div>
-          {[
-            ["PMS", "/complaint-dashboard"],
-            ["RIA", "/complaint-dashboard-ria"],
-            ["AIF", "/complaint-dashboard-aif"],
-          ].map(([name, url]) => (
-            <a className="text-link" key={name} href={site + url}>
-              {name} report <Icon name="external" size={15} />
-            </a>
-          ))}
-        </div>
-      </details>
-    </aside>
-  );
-}
 function Links({ title, items }) {
   return (
     <div>
