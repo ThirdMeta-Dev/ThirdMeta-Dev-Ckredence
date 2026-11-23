@@ -1,0 +1,576 @@
+{
+  "logo": "/media/ckredence-wealth.webp",
+  "hero": {
+    "growth": "/media/hero-detail-4.webp",
+    "investor": "/media/hero-detail-1.webp"
+  },
+  "services": [
+    {
+      "title": "Portfolio Management Service",
+      "link": "https://ckredencewealth.com/pms"
+    },
+    {
+      "title": "Mutual Fund",
+      "link": "https://ckredencewealth.com/mutual-funds"
+    },
+    {
+      "title": "Equity",
+      "link": "https://ckredencewealth.com/equity"
+    },
+    {
+      "title": "Registered Investment Adviser (RIA)",
+      "link": "https://ckredencewealth.com/ria"
+    }
+  ],
+  "strategies": [
+    {
+      "label": "All Weather",
+      "title": "All Weather Investment Approach",
+      "body": "The primary objective of All-weather Investment Approach is to generate long term capital appreciation and superior returns by investing across asset classes.",
+      "link": "https://ckredencewealth.com/all-weather-investment-approach/all-weather-portfolio-management-service",
+      "date": "As on 31st October, 2026",
+      "charts": [
+        "/media/strategy-0-0.svg"
+      ]
+    },
+    {
+      "label": "Diversified",
+      "title": "Diversified Investment Approach",
+      "body": "Diversification Investment Approach intends to invest in baskets of stocks with no undue concentration in any stock or sector.",
+      "link": "https://ckredencewealth.com/diversified-investment-approach/diversified-fund-portfolio-management-service",
+      "date": "As on 31st October, 2026",
+      "charts": [
+        "/media/strategy-1-0.svg"
+      ]
+    },
+    {
+      "label": "Business Cycle",
+      "title": "Business Cycle Investment Approach",
+      "body": "The objective of the fund is to generate long-term wealth by identifying and investing in sectors & companies which are at the cusp of the growth cycle.",
+      "link": "https://ckredencewealth.com/business-cycle-investment-approach/business-cycle-portfolio-management-service",
+      "date": "As on 31st October, 2026",
+      "charts": [
+        "/media/strategy-2-0.svg"
+      ]
+    },
+    {
+      "label": "ICE Growth",
+      "title": "ICE Growth Investment Approach",
+      "body": "ICE Growth Investment Approach intends to invest in baskets of stocks covering consumption, exports and investment aspects of the economy with no undue concentration in any stock or sector.",
+      "link": "https://ckredencewealth.com/ice-growth/ice-growth-fund-portfolio-management-service",
+      "date": "As on 31st October, 2026",
+      "charts": [
+        "/media/strategy-3-0.svg"
+      ]
+    }
+  ],
+  "manager": {
+    "links": [
+      {
+        "label": "View Articles",
+        "url": "https://ckredencewealth.com/insights"
+      }
+    ]
+  },
+  "screens": [
+    "/media/app-0.webp",
+    "/media/app-1.webp",
+    "/media/app-2.webp"
+  ],
+  "stores": [
+    {
+      "label": "Download on theApp Store",
+      "url": "https://apps.apple.com/in/app/ckredence-wealth/id1196670198"
+    },
+    {
+      "label": "GET IT ONGoogle Play",
+      "url": "https://play.google.com/store/apps/details?id=com.tvs.chirag"
+    }
+  ],
+  "awards": [
+    {
+      "title": "BSE award for transaction 2022 - 23'",
+      "detail": "Highest online transaction"
+    },
+    {
+      "title": "CAMS award for transaction 2022 - 23'",
+      "detail": "Highest online mutual fund on CAMS Surat"
+    },
+    {
+      "title": "BSE Star MF: 2020 - 21",
+      "detail": "Highest online mutual fund AUM in Surat in the Veteran IFA Category"
+    },
+    {
+      "title": "Diversified Investment Approach in Top 15 PMS for June ’24 in India",
+      "detail": "Under Quality, Risk and Consistency Report Published by PMS AIF Report"
+    },
+    {
+      "title": "Diversified Investment Approach in Top 10 PMS for March ’24 in India",
+      "detail": "Under Quality, Risk and Consistency Report Published by PMS AIF Report"
+    },
+    {
+      "title": "Certificate award for NFO contribution - F.Y 2023 - 24'",
+      "detail": "By Aditya Birla, TATA, SBI, Sundaram, ICICI, HDFC, Bandhan"
+    }
+  ],
+  "communities": [
+    {
+      "label": "Ckredence Financial Services - For Equity",
+      "url": "https://chat.whatsapp.com/JlcdzTuBfB682jdY5BCmQZ"
+    },
+    {
+      "label": "Ckredence Financial Services IPO - For Equity",
+      "url": "https://chat.whatsapp.com/H2ACmRcQ6xt6m86NEEqiPe"
+    },
+    {
+      "label": "Ckredence Investment - For Mutual Fund",
+      "url": "https://chat.whatsapp.com/EwIzxUEBRjKFoUA9awdrJp"
+    },
+    {
+      "label": "Ckredence Wealth - For Portfolio Management Service",
+      "url": "https://chat.whatsapp.com/EqDq3VS0eAgEYtgu38g8z9"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Who is a Portfolio Manager?",
+      "a": "A portfolio manager is a body corporate, which, pursuant to a contract with a client, advises or directs or undertakes on behalf of the client (whether as a discretionary portfolio manager or otherwise) the management or administration of a portfolio of securities or goods or funds of the client."
+    },
+    {
+      "q": "What is the difference between discretionary portfolio management service and non-discretionary portfolio management service?",
+      "a": "In discretionary portfolio management service, the portfolio manager individually and independently manages the funds and securities of each client in accordance with the needs of the client. Under the non-discretionary portfolio management service, the portfolio manager manages the funds in accordance with the directions of the client."
+    },
+    {
+      "q": "What is the procedure of making an application for obtaining registration as a portfolio manager from SEBI?",
+      "a": "As per regulations governing Portfolio Management Services in India, returns cannot be guaranteeFor obtaining registration as a portfolio manager, an applicant is required to make an online application through the SEBI Intermediaries Portal along with a non-refundable application fee of INR1,00,000/- by way of direct credit in the bank account of SEBI through NEFT/RTGS/IMPS or any other mode allowed by RBI. Alternatively, the application fee can also be paid by way of demand draft drawn in favor of ‘Securities and Exchange Board of India’, payable at Mumbai or at the place where respective regional office is located. Any applicant desirous of seeking registration as a Portfolio Manager under PMS Regulations shall file their applications in Form A on the online system at https://siportal.sebi.gov.in"
+    },
+    {
+      "q": "What is the minimum Net worth requirement of a portfolio manager?",
+      "a": "The portfolio manager is required to have a minimum networth of INR 5 crore."
+    },
+    {
+      "q": "What fees can a portfolio manager charge from its clients for the services rendered by him?",
+      "a": "SEBI (Portfolio Managers) Regulations, 2020 provide that the portfolio manager shall charge a fee as per the agreement with the client for rendering portfolio management services. The fee so charged may be a fixed amount or a performance-based fee or a combination of both. However, no upfront fees shall be charged by the portfolio manager directly or indirectly to the clients.The agreement between the portfolio manager and the client shall, inter-alia, also include the quantum and the manner of fees payable by the client for each activity for which service is rendered by the portfolio manager directly or indirectly."
+    },
+    {
+      "q": "What are the various securities in which a Portfolio Manager may invest clients’ funds?"
+    },
+    {
+      "q": "Whether the funds of clients availing discretionary PMS may be invested in unlisted bonds, which are traded over the counter but settled and reported to the Stock Exchanges?",
+      "a": "No."
+    },
+    {
+      "q": "An existing client of Non-Discretionary PMS, who has already invested in certain unlisted securities, wants to subscribe to rights issue of such unlisted securities, which may result in breach of the 25% limit. Is this permitted?",
+      "a": "An active breach due to investor action, subsequent to corporate actions like subscription to rights issue, which results in breach of 25% limit applicable to Non\u0002Discretionary portfolios, shall be considered as non-compliance. However, a passive breach due to corporate actions like bonus with respect to value of unlisted securities will not be considered as non-compliance."
+    },
+    {
+      "q": "What is the minimum value of funds or securities that can be accepted by the portfolio manager from the client while opening the PMS account?",
+      "a": "The portfolio manager is required to accept minimum INR 50 Lacs or securities having a minimum worth of INR 50 Lacs from the client."
+    },
+    {
+      "q": "Clients on-boarded by the Portfolio Manager prior to January 21, 2020 were required to bring in minimum of INR 25 Lacs as their initial investment. What is the minimum amount that may be further invested (top-up) by such clients on or after January 21, 2020?",
+      "a": "Clients of Portfolio Managers on-boarded before January 21, 2020 shall, in case of any top-up, comply with the requirement of new minimum investment amount and top up their accounts to minimum INR 50 Lacs."
+    },
+    {
+      "q": "Is Partial withdrawal of Portfolio permitted, for the existing clients of Portfolio Managers?",
+      "a": "The client may withdraw partial amounts from his portfolio, in accordance with the terms of the agreement between the client and the Portfolio Manager. However, the value of investment in the portfolio after such withdrawal shall not be less than the applicable minimum investment amount."
+    },
+    {
+      "q": "Is Partial withdrawal of Portfolio permitted, for the existing client of Portfolio Managers?",
+      "a": "The client may withdraw partial amounts from his portfolio, by the terms of the agreement between the client and the Portfolio Manager. However, the value of an investment in the portfolio after such withdrawal shall not be less than the applicable minimum investment amount."
+    },
+    {
+      "q": "Is the client required to top up his account if the portfolio value falls below the minimum investment amount as provided in the SEBI (Portfolio Managers) Regulations, 2020 as a result of valuation of portfolio?",
+      "a": "No."
+    },
+    {
+      "q": "How are the limits on transactions executed through associates of Portfolio Managers applicable?",
+      "a": "Charges for all transactions in a financial year (Broking, Demat, custody etc.) through self or associates shall be capped at 20% by value per associate (including self) per service. Such limits shall apply separately for demat services, custodian services etc. Further, any charges to self/associate shall not be at rates more than that paid to the non-associates providing the same service. For instance, in case of Broking services, the total amount paid to the associate Stock Broker cannot be more than 20% of the total brokerage paid for trades on behalf of its clients during the year. If Portfolio Manager uses multiple Stock Brokers who are its associates, then transaction through each associate Stock Broker shall be capped at 20% of the total brokerage paid for trades on behalf of its clients during the year."
+    },
+    {
+      "q": "Is there any restriction on the number of non-associates through which transactions stated in the previous question may be executed?",
+      "a": "There is no restriction imposed on the number of non-associate Stock Brokers, Depository Participants or Custodians that may be engaged by a Portfolio Manager. For e.g. The Portfolio Manager may utilize a single non-associate Stock Broker for executing 100% of the trades on behalf of its clients."
+    },
+    {
+      "q": "On what basis is the performance of the portfolio manager calculated?",
+      "a": "The performance of a discretionary portfolio manager is calculated using time weighted rate of return (TWRR) method for the immediately preceding three years or period of operation, whichever is lesser. SEBI Circular No. SEBI/HO/IMD/DF1/CIR/P/2020/26 dated February 13, 2020, inter\u0002alia, provides information on reporting of performance by Portfolio Managers and also a client reporting format which includes information on the performance of the client account, portfolio manager and the appropriate benchmark."
+    },
+    {
+      "q": "How is TWRR calculated for the purpose of calculating performance of the portfolio manager?",
+      "a": "The time-weighted rate of return breaks up the return on an investment portfolio into separate intervals, based on whether money was added or withdrawn from the fund. The detailed calculation and an indicative illustration in this regard is provided in Annexure 1."
+    },
+    {
+      "q": "How will the performance fee be calculated considering the high watermark principle?",
+      "a": "An indicative illustration for calculation of performance fee, considering high watermark principle, is provided in Annexure 2."
+    },
+    {
+      "q": "What kind of reports can the client expect from the portfolio manager?",
+      "a": "The portfolio manager shall furnish periodically a report to the client, as per the agreement, but not exceeding a period of three months and such report shall contain the following details, namely: - (a) the composition and the value of the portfolio, description of securities and goods, number of securities, value of each security held in the portfolio, units of goods, value of goods, cash balance and aggregate value of the portfolio as on the date of report; (b) transactions undertaken during the period of report including date of transaction and details of purchases and sales; (c) beneficial interest received during that period in the form of interest, dividend, bonus shares, rights shares, etc; (d) expenses incurred in managing the portfolio of the client; (e) details of risk foreseen by the portfolio manager and the risk relating to the securities recommended by the portfolio manager for investment or disinvestment; (f) default in payment of coupons or any other default in payments in the underlying debt security and downgrading to default rating by the rating agencies, if any; (g) details of commission paid to distributor(s) for the particular client."
+    },
+    {
+      "q": "What is the disclosure mechanism of the portfolio managers to their clients?",
+      "a": "The portfolio manager provides to the client the Disclosure Document prior to entering into an agreement with the client. The Disclosure Document contains the quantum and manner of payment of fees payable by the client for each activity, portfolio risks, complete disclosures in respect of transactions with related parties, the performance of the portfolio manager and the audited financial statements of the portfolio manager for the immediately preceding three years."
+    },
+    {
+      "q": "Does SEBI approve any of the services offered by portfolio managers?",
+      "a": "No. SEBI does not approve any of the services offered by the Portfolio Manager. An investor has to invest in the services based on the terms and conditions laid out in the disclosure document and the agreement between the portfolio manager and the investor."
+    },
+    {
+      "q": "Does SEBI approve the disclosure document of the portfolio manager?",
+      "a": "No. SEBI also does not certify the accuracy or adequacy of the contents of the Disclosure Document."
+    },
+    {
+      "q": "What are the rules governing services of a Portfolio Manager?",
+      "a": "The services of a Portfolio Manager are governed by the agreement between the portfolio manager and the investor. The agreement should cover the minimum details as specified in the SEBI Portfolio Manager Regulations. However, additional requirements can be specified by the Portfolio Manager in the agreement with the client. Hence, an investor is advised to read the agreement carefully before signing it."
+    },
+    {
+      "q": "Can a Portfolio Manager impose a lock-in on the investor?",
+      "a": "Portfolio managers cannot impose a lock-in on the investment of their clients. However, a portfolio manager can charge applicable exit fees from the client for early exit, as laid down in the agreement subject to provision of SEBI Circular No. SEBI/HO/IMD/DF1/CIR/P/2020/26."
+    },
+    {
+      "q": "Can a Portfolio Manager offer indicative or guaranteed returns?",
+      "a": "No."
+    },
+    {
+      "q": "Where can an investor look out for information on portfolio managers?",
+      "a": "Investors can log on to the website of SEBI www.sebi.gov.in for information on SEBI regulations and circulars pertaining to portfolio managers. Addresses of the registered portfolio managers are also available on the SEBI website. Information on monthly reports submitted by Portfolio Managers to SEBI can be accessed at https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doPmr=yes."
+    },
+    {
+      "q": "Where can an investor file their complaints?",
+      "a": "Investors would find the name, address and telephone number of the investor relation officer of the portfolio manager (who attends to the investor queries and complaints)"
+    }
+  ],
+  "reviews": [
+    {
+      "name": "Jatin Gohel",
+      "text": [
+        "2 Years Ago",
+        "Polite and Proper customer service with a good feedback mechanism.",
+        "Jatin Gohel",
+        "G"
+      ],
+      "image": "/media/review-0.webp"
+    },
+    {
+      "name": "Bhavesh Tadavi",
+      "text": [
+        "2 Years Ago",
+        "It's excellent place for investment and more profitable idea for great life",
+        "Bhavesh Tadavi",
+        "G"
+      ],
+      "image": "/media/review-1.webp"
+    },
+    {
+      "name": "Mayur Shah",
+      "text": [
+        "4 years ago",
+        "Very good experience!!! Handles portfolio nicely.. prompt replies, regular followup...These guys are excellent",
+        "Mayur Shah",
+        "G"
+      ],
+      "image": "/media/review-2.webp"
+    },
+    {
+      "name": "Shahnawaz Shaikh",
+      "text": [
+        "2 years ago",
+        "Ckredence Wealth - is one of the best financial advisor i have ever met. I am astonished with the technical advise and investment plans they offered to me. One must visit for best future planning.",
+        "Shahnawaz Shaikh",
+        "G"
+      ],
+      "image": "/media/review-0.webp"
+    },
+    {
+      "name": "Ajay Jariwala",
+      "text": [
+        "A year ago",
+        "Very nice service and good staff. Always getting quick reply for any query. Ms Riya Always very supportive and helpful.",
+        "Ajay Jariwala",
+        "G"
+      ],
+      "image": "/media/review-1.webp"
+    },
+    {
+      "name": "Shruti Khalasi",
+      "text": [
+        "4 months ago",
+        "It is a very good company to invest in. And it provides service to very good people.",
+        "Shruti Khalasi",
+        "G"
+      ],
+      "image": "/media/review-5.webp"
+    },
+    {
+      "name": "Jainendra Jariwala",
+      "text": [
+        "3 weeks ago",
+        "Incredible experience with Ckredence wealth Team , Team is good with experience and knowledge.",
+        "Jainendra Jariwala",
+        "G"
+      ],
+      "image": "/media/review-0.webp"
+    },
+    {
+      "name": "Pratik Shah",
+      "text": [
+        "A year ago",
+        "Service is good and staff is very helpful",
+        "Pratik Shah",
+        "G"
+      ],
+      "image": "/media/review-7.webp"
+    },
+    {
+      "name": "Jimmy Pardhi",
+      "text": [
+        "4 weeks ago",
+        "The service and the overall experience wa outstanding. I will definitely be in touch with this company regularly and will recommend them to everyone I know!!",
+        "Jimmy Pardhi",
+        "G"
+      ],
+      "image": "/media/review-8.webp"
+    },
+    {
+      "name": "Naman Sharma",
+      "text": [
+        "A year ago",
+        "I would not hesitate to recommend your company to others and look forward to engaging with your services again in the future.",
+        "Naman Sharma",
+        "G"
+      ],
+      "image": "/media/review-1.webp"
+    },
+    {
+      "name": "Kia Piuh",
+      "text": [
+        "2 years ago",
+        "One of the best finacial Service Provider in Surat ... who support's clients very well from base roots and give realtime solutions and advices for their benefits ... Cooperative staff with too good advisory skills with best Financial Knowledge.... 👍",
+        "Kia Piuh",
+        "G"
+      ],
+      "image": "/media/review-10.webp"
+    }
+  ],
+  "support": {
+    "links": [
+      {
+        "label": "Quick Support",
+        "url": "https://api-wa.co/tRC0zw"
+      }
+    ],
+    "image": "/media/support.webp"
+  },
+  "footer": {
+    "groups": {
+      "company": [
+        {
+          "label": "PMS",
+          "url": "https://ckredencewealth.com/pms"
+        },
+        {
+          "label": "RIA",
+          "url": "https://ckredencewealth.com/ria"
+        },
+        {
+          "label": "Mutual Fund",
+          "url": "https://ckredencewealth.com/mutual-funds"
+        },
+        {
+          "label": "Equity",
+          "url": "https://ckredencewealth.com/equity"
+        },
+        {
+          "label": "About Us",
+          "url": "https://ckredencewealth.com/about-us"
+        },
+        {
+          "label": "Contact Us",
+          "url": "https://ckredencewealth.com/contact-us"
+        },
+        {
+          "label": "NRI Desk",
+          "url": "https://ckredencewealth.com/nri-desk"
+        },
+        {
+          "label": "Resources",
+          "url": "https://ckredencewealth.com/our-resources"
+        },
+        {
+          "label": "Insights",
+          "url": "https://ckredencewealth.com/insights"
+        },
+        {
+          "label": "Career",
+          "url": "https://ckredencewealth.com/contact-us#careers"
+        },
+        {
+          "label": "Direct PMS Onboarding",
+          "url": "https://ckredencewealth.com/direct-pms-onboarding"
+        }
+      ],
+      "contact": [
+        {
+          "label": "info@ckredencewealth.com",
+          "url": "mailto:info@ckredencewealth.com"
+        },
+        {
+          "label": "compliance@ckredencewealth.com",
+          "url": "mailto:compliance@ckredencewealth.com"
+        },
+        {
+          "label": "grievances@ckredencewealth.com",
+          "url": "mailto:grievances@ckredencewealth.com"
+        },
+        {
+          "label": "0261-6946656",
+          "url": "tel:0261-6946656"
+        }
+      ],
+      "related": [
+        {
+          "label": "AMFI",
+          "url": "https://www.amfiindia.com/"
+        },
+        {
+          "label": "SEBI",
+          "url": "https://www.sebi.gov.in/"
+        },
+        {
+          "label": "SCORES",
+          "url": "https://scores.sebi.gov.in/"
+        },
+        {
+          "label": "SMART ODR",
+          "url": "https://smartodr.in/"
+        },
+        {
+          "label": "SMART ODR SEBI Circular",
+          "url": "https://www.sebi.gov.in/legal/circulars/jul-2023/online-resolution-of-disputes-in-the-indian-securities-market_74794.html"
+        },
+        {
+          "label": "BSEINDIA",
+          "url": "https://www.bseindia.com/"
+        },
+        {
+          "label": "NSEINDIA",
+          "url": "https://www.nseindia.com/"
+        }
+      ],
+      "policies": [
+        {
+          "label": "Cookies Policy",
+          "url": "https://ckredencewealth.com/cookies-policy"
+        },
+        {
+          "label": "Privacy Policy",
+          "url": "https://ckredencewealth.com/files/framer-import/ZtuarsDCpcs0d75eynQ6qTsqA.pdf"
+        },
+        {
+          "label": "PMLA Policy",
+          "url": "https://ckredencewealth.com/files/framer-import/l3Bz4O1n8xiJlkgXVOeK0L7QA9U.pdf"
+        },
+        {
+          "label": "Investor Charter (PMS)",
+          "url": "https://ckredencewealth.com/files/framer-import/ncoXDWwhBj9W3DaNf5EdWYo4U.pdf"
+        },
+        {
+          "label": "Investor Charter (RIA)",
+          "url": "https://ckredencewealth.com/files/framer-import/IPt6xY5UpTnVSLkpNbE1VShrR24.pdf"
+        },
+        {
+          "label": "Annual Return 31-03-2026",
+          "url": "https://ckredencewealth.com/media/annual-return-31-03-2026.pdf"
+        },
+        {
+          "label": "Accredited Investors",
+          "url": "https://ckredencewealth.com/media/accredited-investors.pdf"
+        },
+        {
+          "label": "PMS UPI Disclosures",
+          "url": "https://ckredencewealth.com/pms-upi"
+        },
+        {
+          "label": "RIA UPI Disclosures",
+          "url": "https://ckredencewealth.com/ria-upi"
+        }
+      ],
+      "social": [
+        {
+          "label": "X (Twitter)",
+          "url": "https://x.com/CkredenceWealth"
+        },
+        {
+          "label": "linkedin",
+          "url": "https://www.linkedin.com/company/ckredencewealth/"
+        },
+        {
+          "label": "Youtube",
+          "url": "https://www.youtube.com/@ckredencewealth1706"
+        },
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/ckredencewealth/"
+        },
+        {
+          "label": "Facebook",
+          "url": "https://www.facebook.com/ckredencewealth"
+        }
+      ]
+    },
+    "offices": [
+      [
+        "Surat (Head office)",
+        "901-03, International Wealth Center, VIP Road, near C.B Patel Club House, Vesu, Surat, Gujarat 395007"
+      ],
+      [
+        "Mumbai Office",
+        "1207, kosha kommercial komplex, Behind Lakshmi Narayan Shopping Center, Poddar road, Malad East, Mumbai-400097"
+      ],
+      [
+        "Vadodara Office",
+        "507, The Park, Akshar Chowk, Vadodara 390020, India"
+      ]
+    ],
+    "entities": [
+      [
+        "Ckredence Wealth Management Pvt Ltd",
+        "CIN: U67120GJ2001PTC039294"
+      ],
+      [
+        "Ckredence Investment Services Pvt Ltd",
+        "CIN: U67120GJ2005PTC045572"
+      ],
+      [
+        "Ckredence Financial Services",
+        "REGN NO: GUJ/SRT/(17) – 40682"
+      ]
+    ],
+    "registrations": [
+      [
+        "AMFI Regd MF Distributor",
+        "ARN - 52902"
+      ],
+      [
+        "Date of initial reg.",
+        "20-09-2007"
+      ],
+      [
+        "Current Validity of ARN.",
+        "19-09-2027"
+      ],
+      [
+        "PMS SEBI Regn No.",
+        "INP000007164"
+      ],
+      [
+        "SEBI Regn No.",
+        "AP0106360135292"
+      ],
+      [
+        "RIA SEBI Regn No.",
+        "INA000020846"
+      ]
+    ]
+  }
+}
