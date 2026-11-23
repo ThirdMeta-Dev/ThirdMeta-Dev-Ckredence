@@ -125,8 +125,6 @@ export function Header() {
 }
 
 export function Hero() {
-  const [slide, setSlide] = useState(0);
-  const change = () => setSlide((v) => 1 - v);
   return (
     <section className="hero wrap" aria-labelledby="hero-title">
       <div className="rank-note">
@@ -164,7 +162,16 @@ export function Hero() {
           Latest insights <Icon name="external" size={14} />
         </a>
       </div>
-      <div className="highlight" role="region" aria-roledescription="carousel" aria-label="Ckredence highlights">
+    </section>
+  );
+}
+
+export function Highlights() {
+  const [slide, setSlide] = useState(0);
+  const change = () => setSlide((v) => 1 - v);
+  return (
+    <section className="wrap highlights-section" aria-roledescription="carousel" aria-label="Ckredence highlights">
+      <div className="highlight">
         <div className="highlight-copy" key={slide} aria-live="polite">
           <p className="label">{slide ? "Portfolio Management Services" : "Ckredence Mutual Funds App"}</p>
           <h2>{slide ? <>Ranked 69th<br/>across India.</> : <>Your investments,<br/>at your fingertips.</>}</h2>

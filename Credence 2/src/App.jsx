@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import data from "./content.json";
 import articles from "./articles.json";
-import { Header, Hero, Icon, Action, Label, site } from "./ui.jsx";
+import { Header, Hero, Highlights, Icon, Action, Label, site } from "./ui.jsx";
 import {
   Community,
   Faq,
@@ -173,39 +173,42 @@ function Strategies() {
   }
 
   return (
-    <section className="section tint" id="approaches">
-      <div className="wrap approach-track" ref={track}>
-        <header className="approach-heading" ref={heading}>
-          <div className="approach-intro">
-            <Label>Portfolio Management Services</Label>
-            <h2>PMS investment approaches</h2>
-          </div>
-          <nav className="tabs" aria-label="Investment approaches">
-            {data.strategies.map((item, i) => (
-              <a key={item.label} href={"#approach-" + i} aria-current={active === i ? "location" : undefined}
-                onKeyDown={event => onKey(event, i)}>{item.label}</a>
-            ))}
-          </nav>
-        </header>
-        {data.strategies.map((item, i) => (
-          <div className="approach-step" id={"approach-" + i} key={item.label}
-            ref={node => { steps.current[i] = node; }}>
-            <div className="approach-position">
-              <article className="strategy" aria-labelledby={"strategy-title-" + i}>
-                <div>
-                  <h3 id={"strategy-title-" + i}>{item.title}</h3>
-                  <p>{item.body}</p>
-                  <Action href={item.link}>Know more</Action>
-                </div>
-                <a className="chart" href={item.link}
-                  aria-label={"View " + item.label + " performance and benchmark details"}>
-                  <img src={item.charts[0]} alt={item.label + " performance by investment period. " + item.date}/>
-                </a>
-              </article>
+    <section id="approaches" aria-labelledby="approaches-heading">
+      <div className="section tint">
+        <div className="wrap approach-track" ref={track}>
+          <header className="approach-heading" ref={heading}>
+            <div className="approach-intro">
+              <Label>Portfolio Management Services</Label>
+              <h2 id="approaches-heading">PMS investment approaches</h2>
             </div>
-          </div>
-        ))}
+            <nav className="tabs" aria-label="Investment approaches">
+              {data.strategies.map((item, i) => (
+                <a key={item.label} href={"#approach-" + i} aria-current={active === i ? "location" : undefined}
+                  onKeyDown={event => onKey(event, i)}>{item.label}</a>
+              ))}
+            </nav>
+          </header>
+          {data.strategies.map((item, i) => (
+            <div className="approach-step" id={"approach-" + i} key={item.label}
+              ref={node => { steps.current[i] = node; }}>
+              <div className="approach-position">
+                <article className="strategy" aria-labelledby={"strategy-title-" + i}>
+                  <div>
+                    <h3 id={"strategy-title-" + i}>{item.title}</h3>
+                    <p>{item.body}</p>
+                    <Action href={item.link}>Know more</Action>
+                  </div>
+                  <a className="chart" href={item.link}
+                    aria-label={"View " + item.label + " performance and benchmark details"}>
+                    <img src={item.charts[0]} alt={item.label + " performance by investment period. " + item.date}/>
+                  </a>
+                </article>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
+      <Statistics />
     </section>
   );
 }
@@ -391,9 +394,9 @@ export default function App() {
       <Header />
       <main id="main">
         <Hero />
+        <Highlights />
         <Services />
         <Strategies />
-        <Statistics />
         <Manager />
         <MobileApp />
         <Blogs />
