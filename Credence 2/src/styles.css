@@ -964,7 +964,7 @@ p {
   text-decoration: underline;
 }
 .client-reviews {
-  background: var(--canvas);
+  background: linear-gradient(to bottom, var(--panel-background), #fff);
   border-radius: 30px;
 }
 .review-wrap {
@@ -1048,11 +1048,11 @@ p {
 .review-controls button {
   width: 44px;
   height: 44px;
-  border: 6px solid var(--canvas);
-  background: var(--ink);
+  border: 6px solid transparent;
+  background: var(--ink) padding-box;
   color: white;
 }
-.review-controls button:hover { background: var(--brand); box-shadow: none; }
+.review-controls button:hover { background: var(--brand) padding-box; box-shadow: none; }
 .review-directory {
   position: relative;
   display: flex;
