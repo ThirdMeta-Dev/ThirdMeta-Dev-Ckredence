@@ -1,6 +1,6 @@
 import { useLayoutEffect, useRef, useState } from 'react';
 import data from '../homepage.json';
-import { Action, Container, SectionHeading, useMedia } from './shared';
+import { Action, Container, mediaUrl, SectionHeading, useMedia } from './shared';
 import './services.css';
 
 const services = data.services;
@@ -39,7 +39,7 @@ function ImagePair({ item }) {
           className={`service-frame frame-${frame}`}
           style={{ '--service-ratio': ratio }}
         >
-          <img src={src} alt={alt} loading="lazy" decoding="async" />
+          <img src={mediaUrl(src)} alt={alt} loading="lazy" decoding="async" />
         </div>
       ))}
     </div>

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import data from '../homepage.json';
-import { Container, SectionHeading, Action, actionUrl } from './shared';
+import { Container, SectionHeading, Action, actionUrl, mediaUrl } from './shared';
 import PerformanceChart from './PerformanceChart';
 
 export function Strategies() {
@@ -100,7 +100,7 @@ export function Manager() {
             </div>
           </div>
           <div className="manager-photo">
-            <img src="/media/kartik-mehta.webp" alt="Kartik Mehta" loading="lazy" />
+            <img src={mediaUrl('/media/kartik-mehta.webp')} alt="Kartik Mehta" loading="lazy" />
           </div>
         </div>
       </Container>

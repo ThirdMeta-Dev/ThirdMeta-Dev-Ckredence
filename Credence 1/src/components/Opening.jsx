@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import data from '../homepage.json';
-import { Container, Action, actionUrl, StepControls } from './shared';
+import { Container, Action, actionUrl, mediaUrl, StepControls } from './shared';
 
 function InvestmentLinks({ compact = false }) {
   return (
@@ -70,7 +70,7 @@ export function Header() {
         <Container className="head-row">
           <a href="#content" className="home-logo">
             <img
-              src="/media/logo.webp"
+              src={mediaUrl('/media/logo.webp')}
               alt="Ckredence Wealth — Your Journey to Prosperity"
               width="175"
               height="51"
@@ -120,7 +120,7 @@ export function Opening() {
     setSlide((current) => (current + step + data.banners.length) % data.banners.length);
   const image = (
     <img
-      src={banner.image}
+      src={mediaUrl(banner.image)}
       alt={slide === 0 ? 'Ckredence Wealth podcast — live' : banner.alt}
       width="1800"
       height="534"
@@ -139,10 +139,10 @@ export function Opening() {
           <div className="hero-copy">
             <a href={actionUrl('/our-resources')} className="news-link">
               <span className="news-art" aria-hidden="true">
-                <img src="/media/hero-inline-1.webp" alt="" />
+                <img src={mediaUrl('/media/hero-inline-1.webp')} alt="" />
                 <span className="journey-art">
-                  <img src="/media/hero-inline-2.webp" alt="" />
-                  <img src="/media/hero-inline-3.webp" alt="" />
+                  <img src={mediaUrl('/media/hero-inline-2.webp')} alt="" />
+                  <img src={mediaUrl('/media/hero-inline-3.webp')} alt="" />
                 </span>
               </span>
               <strong>What's new</strong>
@@ -158,7 +158,7 @@ export function Opening() {
           <div className="hero-art">
             <img
               className="hero-photo"
-              src="/media/hero-inline-4.webp"
+              src={mediaUrl('/media/hero-inline-4.webp')}
               width="1117"
               height="763"
               alt=""

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import data from '../homepage.json';
-import { Container, Action, actionUrl } from './shared';
+import { Container, Action, actionUrl, mediaUrl } from './shared';
 
 export function Expert() {
   return (
@@ -56,7 +56,7 @@ export function Complaints() {
         aria-expanded={open}
         onClick={() => setOpen(!open)}
       >
-        <img src="/media/complaints.webp" alt="" />
+        <img src={mediaUrl('/media/complaints.webp')} alt="" />
         <span>
           <strong>Complaint Reports</strong>
           <small className="desktop-report">0 Score Reports Filed</small>
@@ -95,7 +95,7 @@ export function Footer() {
       <Container>
         <div className="footer-brand">
           <a href="#content">
-            <img src="/media/logo-light.webp" alt="Ckredence Wealth" />
+            <img src={mediaUrl('/media/logo-light.webp')} alt="Ckredence Wealth" />
           </a>
           <p>
             Transforming Investments

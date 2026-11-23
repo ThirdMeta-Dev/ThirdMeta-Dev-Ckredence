@@ -4,6 +4,10 @@ export function actionUrl(path) {
   return new URL(path, 'https://ckredencewealth.com').href;
 }
 
+export function mediaUrl(path) {
+  return import.meta.env.BASE_URL + path.replace(/^\//, '');
+}
+
 export function Container({ as: Element = 'div', className = '', children, ...props }) {
   return (
     <Element className={`wrap ${className}`.trim()} {...props}>
@@ -32,9 +36,9 @@ export function Action({ href, children, secondary = false }) {
 export function Label({ children }) {
   return (
     <p className="label">
-      <img src="/media/ornament-left.svg" alt="" width="28" height="14" />
+      <img src={mediaUrl('/media/ornament-left.svg')} alt="" width="28" height="14" />
       {children}
-      <img src="/media/ornament-right.svg" alt="" width="28" height="14" />
+      <img src={mediaUrl('/media/ornament-right.svg')} alt="" width="28" height="14" />
     </p>
   );
 }

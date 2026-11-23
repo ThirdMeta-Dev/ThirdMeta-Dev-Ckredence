@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import data from '../homepage.json';
-import { Container, SectionHeading, Action, Label, actionUrl, useMedia } from './shared';
+import { Container, SectionHeading, Action, Label, actionUrl, mediaUrl, useMedia } from './shared';
 
 export function MutualFundApp() {
   return (
@@ -20,7 +20,7 @@ export function MutualFundApp() {
                 <img
                   key={n}
                   className={'phone phone-' + n}
-                  src={`/media/app-screen-${n}.webp`}
+                  src={mediaUrl(`/media/app-screen-${n}.webp`)}
                   alt="Ckredence mutual fund app screen"
                   loading="lazy"
                 />
@@ -42,7 +42,7 @@ export function MutualFundApp() {
               <h3>1000+ REGISTERED USERS</h3>
               <div className="avatars">
                 {data.appAvatars.map((u) => (
-                  <img key={u} src={u} alt="" loading="lazy" />
+                  <img key={u} src={mediaUrl(u)} alt="" loading="lazy" />
                 ))}
                 <span>YOU</span>
               </div>
@@ -61,7 +61,7 @@ export function MutualFundApp() {
               </div>
               <img
                 className="download-screen"
-                src="/media/app-screen-1.webp"
+                src={mediaUrl('/media/app-screen-1.webp')}
                 alt="Ckredence mutual fund app screen"
                 loading="lazy"
               />
@@ -88,7 +88,7 @@ export function Blogs() {
               className={i === data.blogs.length - 1 ? 'story story-compact' : 'story'}
             >
               <div className="story-art">
-                <img src={item.image} alt="" loading="lazy" />
+                <img src={mediaUrl(item.image)} alt="" loading="lazy" />
               </div>
               <div className="story-copy">
                 <p className="metadata">
@@ -253,7 +253,7 @@ export function Testimonials() {
     <figure className="review" key={item.author}>
       <blockquote>{item.quote}</blockquote>
       <figcaption>
-        <img src={item.image} alt="" loading="lazy" />
+        <img src={mediaUrl(item.image)} alt="" loading="lazy" />
         <span>
           <b>{item.author}</b>
           <small>{item.age}</small>
