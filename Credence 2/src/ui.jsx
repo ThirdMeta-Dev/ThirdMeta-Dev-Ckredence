@@ -142,7 +142,7 @@ export function Hero() {
               src="./media/hero-detail-0.webp"
               alt=""
             />
-            <span className="type-pill">Ckredence Wealth</span>
+            <span>Ckredence Wealth</span>
           </span>
         </span>
         <span className="headline-row">
