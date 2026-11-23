@@ -83,11 +83,29 @@ function Strategies() {
     let frame = 0;
     let stickyTop = 0;
     let current = 0;
+    let previousY = window.scrollY;
+    let compact = 0;
+    let titleSpace = 0;
 
     function sync() {
       frame = 0;
-      const headerBottom = stickyTop + header.offsetHeight;
-      const threshold = headerBottom + Math.min(100, (innerHeight - headerBottom) * 0.25);
+      const y = window.scrollY;
+      const bounds = element.getBoundingClientRect();
+      const expandedBottom = stickyTop + header.offsetHeight;
+      const travel = Math.max(1, titleSpace);
+      // Keep the scroll track stationary as the heading and cards move inside it.
+      const inSection = bounds.top <= stickyTop && bounds.bottom > stickyTop;
+      compact = inSection ? Math.max(0, Math.min(1, compact + (previousY - y) / travel)) : 0;
+      previousY = y;
+      const entrance = Math.max(0, Math.min(1, (stickyTop - bounds.top) / travel));
+      const progress = Math.min(compact, entrance);
+      const eased = reducedMotion.matches ? Number(progress >= 0.5) : progress * progress * (3 - 2 * progress);
+      const collapse = titleSpace * eased;
+      element.style.setProperty("--approach-collapse", collapse.toFixed(2) + "px");
+      header.style.setProperty("--approach-title-opacity", (1 - eased).toFixed(3));
+      const headerBottom = expandedBottom - collapse;
+      // Tab anchors and selection share the full heading's stable reference point.
+      const threshold = expandedBottom + Math.min(100, (innerHeight - expandedBottom) * 0.25);
       let next = 0;
       const positions = steps.current.map((step, i) => {
         if (step.getBoundingClientRect().top <= threshold) next = i;
@@ -111,6 +129,7 @@ function Strategies() {
         const style = steps.current[i].firstElementChild.style;
         style.setProperty("--approach-opacity", opacity.toFixed(3));
         style.setProperty("--approach-offset", offset.toFixed(2) + "px");
+        style.setProperty("--approach-scale", (1 - 0.055 * (1 - opacity) - 0.025 * eased).toFixed(4));
       });
     }
 
@@ -119,6 +138,7 @@ function Strategies() {
     }
     function measure() {
       stickyTop = parseFloat(getComputedStyle(header).top);
+      titleSpace = header.querySelector(".tabs").offsetTop - header.firstElementChild.offsetTop;
       element.style.setProperty("--approach-heading-height", header.offsetHeight + "px");
       for (const step of steps.current) {
         const available = innerHeight - stickyTop - header.offsetHeight;
@@ -156,8 +176,10 @@ function Strategies() {
     <section className="section tint" id="approaches">
       <div className="wrap approach-track" ref={track}>
         <header className="approach-heading" ref={heading}>
-          <Label>Portfolio Management Services</Label>
-          <h2>PMS investment approaches</h2>
+          <div className="approach-intro">
+            <Label>Portfolio Management Services</Label>
+            <h2>PMS investment approaches</h2>
+          </div>
           <nav className="tabs" aria-label="Investment approaches">
             {data.strategies.map((item, i) => (
               <a key={item.label} href={"#approach-" + i} aria-current={active === i ? "location" : undefined}

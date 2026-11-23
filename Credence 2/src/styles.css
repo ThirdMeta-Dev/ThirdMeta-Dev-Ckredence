@@ -563,6 +563,10 @@ p {
   padding: 8px 0 18px;
   text-align: center;
   background: white;
+  transform: translateY(calc(0px - var(--approach-collapse, 0px)));
+}
+.approach-intro {
+  opacity: var(--approach-title-opacity, 1);
 }
 .approach-heading::before {
   content: "";
@@ -578,12 +582,12 @@ p {
 }
 .approach-step.can-pin > .approach-position {
   position: sticky;
-  top: calc(var(--approach-top) + var(--approach-heading-height));
+  top: calc(var(--approach-top) + var(--approach-heading-height) - var(--approach-collapse, 0px));
 }
 @media (prefers-reduced-motion: no-preference) {
   .approach-position > .strategy {
     opacity: var(--approach-opacity, 1);
-    transform: translateY(var(--approach-offset, 0px));
+    transform: translateY(var(--approach-offset, 0px)) scale(var(--approach-scale, 1));
   }
   .approach-position > .strategy:has(:focus-visible) {
     opacity: 1;
