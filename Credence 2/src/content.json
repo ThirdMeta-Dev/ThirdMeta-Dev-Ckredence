@@ -1,8 +1,8 @@
 {
-  "logo": "/media/ckredence-wealth.webp",
+  "logo": "./media/ckredence-wealth.webp",
   "hero": {
-    "growth": "/media/hero-detail-4.webp",
-    "investor": "/media/hero-detail-1.webp"
+    "growth": "./media/hero-detail-4.webp",
+    "investor": "./media/hero-detail-1.webp"
   },
   "services": [
     {
@@ -30,7 +30,7 @@
       "link": "https://ckredencewealth.com/all-weather-investment-approach/all-weather-portfolio-management-service",
       "date": "As on 31st October, 2026",
       "charts": [
-        "/media/strategy-0-0.svg"
+        "./media/strategy-0-0.svg"
       ]
     },
     {
@@ -40,7 +40,7 @@
       "link": "https://ckredencewealth.com/diversified-investment-approach/diversified-fund-portfolio-management-service",
       "date": "As on 31st October, 2026",
       "charts": [
-        "/media/strategy-1-0.svg"
+        "./media/strategy-1-0.svg"
       ]
     },
     {
@@ -50,7 +50,7 @@
       "link": "https://ckredencewealth.com/business-cycle-investment-approach/business-cycle-portfolio-management-service",
       "date": "As on 31st October, 2026",
       "charts": [
-        "/media/strategy-2-0.svg"
+        "./media/strategy-2-0.svg"
       ]
     },
     {
@@ -60,7 +60,7 @@
       "link": "https://ckredencewealth.com/ice-growth/ice-growth-fund-portfolio-management-service",
       "date": "As on 31st October, 2026",
       "charts": [
-        "/media/strategy-3-0.svg"
+        "./media/strategy-3-0.svg"
       ]
     }
   ],
@@ -73,9 +73,9 @@
     ]
   },
   "screens": [
-    "/media/app-0.webp",
-    "/media/app-1.webp",
-    "/media/app-2.webp"
+    "./media/app-0.webp",
+    "./media/app-1.webp",
+    "./media/app-2.webp"
   ],
   "stores": [
     {
@@ -249,7 +249,7 @@
         "Jatin Gohel",
         "G"
       ],
-      "image": "/media/review-0.webp"
+      "image": "./media/review-0.webp"
     },
     {
       "name": "Bhavesh Tadavi",
@@ -259,7 +259,7 @@
         "Bhavesh Tadavi",
         "G"
       ],
-      "image": "/media/review-1.webp"
+      "image": "./media/review-1.webp"
     },
     {
       "name": "Mayur Shah",
@@ -269,7 +269,7 @@
         "Mayur Shah",
         "G"
       ],
-      "image": "/media/review-2.webp"
+      "image": "./media/review-2.webp"
     },
     {
       "name": "Shahnawaz Shaikh",
@@ -279,7 +279,7 @@
         "Shahnawaz Shaikh",
         "G"
       ],
-      "image": "/media/review-0.webp"
+      "image": "./media/review-0.webp"
     },
     {
       "name": "Ajay Jariwala",
@@ -289,7 +289,7 @@
         "Ajay Jariwala",
         "G"
       ],
-      "image": "/media/review-1.webp"
+      "image": "./media/review-1.webp"
     },
     {
       "name": "Shruti Khalasi",
@@ -299,7 +299,7 @@
         "Shruti Khalasi",
         "G"
       ],
-      "image": "/media/review-5.webp"
+      "image": "./media/review-5.webp"
     },
     {
       "name": "Jainendra Jariwala",
@@ -309,7 +309,7 @@
         "Jainendra Jariwala",
         "G"
       ],
-      "image": "/media/review-0.webp"
+      "image": "./media/review-0.webp"
     },
     {
       "name": "Pratik Shah",
@@ -319,7 +319,7 @@
         "Pratik Shah",
         "G"
       ],
-      "image": "/media/review-7.webp"
+      "image": "./media/review-7.webp"
     },
     {
       "name": "Jimmy Pardhi",
@@ -329,7 +329,7 @@
         "Jimmy Pardhi",
         "G"
       ],
-      "image": "/media/review-8.webp"
+      "image": "./media/review-8.webp"
     },
     {
       "name": "Naman Sharma",
@@ -339,7 +339,7 @@
         "Naman Sharma",
         "G"
       ],
-      "image": "/media/review-1.webp"
+      "image": "./media/review-1.webp"
     },
     {
       "name": "Kia Piuh",
@@ -349,7 +349,7 @@
         "Kia Piuh",
         "G"
       ],
-      "image": "/media/review-10.webp"
+      "image": "./media/review-10.webp"
     }
   ],
   "support": {
@@ -359,7 +359,7 @@
         "url": "https://api-wa.co/tRC0zw"
       }
     ],
-    "image": "/media/support.webp"
+    "image": "./media/support.webp"
   },
   "footer": {
     "groups": {

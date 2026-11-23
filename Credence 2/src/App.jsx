@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import data from "./content.json";
 import articles from "./articles.json";
 import { Header, Hero, Icon, Action, Label, site } from "./ui.jsx";
@@ -46,10 +46,10 @@ function Services() {
                 alt=""
                 src={
                   [
-                    "/media/pms-cover.webp",
-                    "/media/funds-cover.webp",
-                    "/media/equity-cover.webp",
-                    "/media/advisory-cover.webp",
+                    "./media/pms-cover.webp",
+                    "./media/funds-cover.webp",
+                    "./media/equity-cover.webp",
+                    "./media/advisory-cover.webp",
                   ][i]
                 }
               />
@@ -222,7 +222,7 @@ function Manager() {
         </div>
         <img
           loading="lazy"
-          src="/media/fund-manager-placeholder.webp"
+          src="./media/fund-manager-placeholder.webp"
           alt="Illustrative portrait of a fund manager"
         />
       </div>
@@ -279,6 +279,7 @@ function MobileApp() {
 function Blogs() {
   const [blogs, setBlogs] = useState(articles);
   useEffect(() => {
+    if (import.meta.env.MODE === "pages") return;
     const controller = new AbortController();
     fetch("/api/articles", { signal: controller.signal })
       .then((r) => (r.ok ? r.json() : null))

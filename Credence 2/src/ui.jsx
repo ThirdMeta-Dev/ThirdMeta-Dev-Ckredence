@@ -1,4 +1,4 @@
-﻿import { useState } from "react";
+import { useState } from "react";
 import content from "./content.json";
 
 export const site = "https://ckredencewealth.com";
@@ -139,7 +139,7 @@ export function Hero() {
           <span className="inline-unit">
             <img
               className="brand-token"
-              src="/media/hero-detail-0.webp"
+              src="./media/hero-detail-0.webp"
               alt=""
             />
             <span className="type-pill">Ckredence Wealth</span>
