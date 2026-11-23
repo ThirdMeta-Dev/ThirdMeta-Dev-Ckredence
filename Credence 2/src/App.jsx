@@ -317,36 +317,32 @@ function Blogs() {
   return (
     <section className="section wrap" id="blogs" aria-labelledby="blogs-title">
       <Label>Blogs</Label>
-      <h2 id="blogs-title">Latest market insights</h2>
-      <div className="insight-spread">
-        <article className="insight-lead">
-          <p className="insight-byline"><strong>Latest article</strong><span>{blogs[0].date}</span></p>
-          <h3>{blogs[0].title}</h3>
-          <p className="insight-publisher">Ckredence Wealth</p>
-          <a className="action" href={blogs[0].url} aria-label={`Read article: ${blogs[0].title}`}>
-            Read article <Icon name="arrow" size={16} />
-          </a>
-        </article>
-        <div className="insight-list">
-          <h3>Earlier articles</h3>
-          <ul>
-            {blogs.slice(1).map((story) => (
-              <li key={story.url}>
-                <a href={story.url}>
-                  <div>
-                    <h4>{story.title}</h4>
-                    <p>{story.date} · Ckredence Wealth</p>
-                  </div>
-                  <img src={story.image} loading="lazy" alt="" width="100" height="64" />
-                </a>
-              </li>
-            ))}
-          </ul>
-          <a className="text-link" href={site + "/our-resources"}>
-            View all blogs <Icon name="external" size={16} />
-          </a>
-        </div>
-      </div>
+      <header className="section-head insights-heading">
+        <h2 id="blogs-title">Latest market insights</h2>
+        <a className="text-link" href={site + "/our-resources"}>
+          View all blogs <Icon name="external" size={16} />
+        </a>
+      </header>
+      <ol className="insights-editions" aria-label="Articles, newest first">
+        {blogs.map((story, index) => (
+          <li key={story.url}>
+            <a className={index === 0 ? "insights-row insights-latest" : "insights-row"}
+              href={story.url} aria-labelledby={`insight-title-${index}`} aria-describedby={`insight-date-${index}`}>
+              <div className="insights-dateline" id={`insight-date-${index}`}>
+                {index === 0 && <strong>Latest article</strong>}
+                <span>{story.date}</span>
+                <span className="insights-author">Ckredence Wealth</span>
+              </div>
+              <h3 id={`insight-title-${index}`}>{story.title}</h3>
+              {index === 0 ? (
+                <span className="action insights-read">Read article <Icon name="arrow" size={16} /></span>
+              ) : (
+                <img src={story.image} alt="" width="96" height="60" loading="lazy" />
+              )}
+            </a>
+          </li>
+        ))}
+      </ol>
     </section>
   );
 }

@@ -774,66 +774,92 @@ p {
   flex-wrap: wrap;
   margin-top: 14px;
 }
-.insight-spread {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(32px, 5vw, 72px);
-  align-items: start;
-  margin-top: 32px;
-}
-.insight-lead { position: relative; padding-block: clamp(16px, 2.5vw, 36px); }
-.insight-byline {
-  display: flex;
-  flex-wrap: wrap;
+.insights-heading {
+  justify-content: space-between;
   align-items: baseline;
-  gap: 4px 12px;
-  color: var(--soft);
-  font-size: 14px;
+  gap: 4px 24px;
 }
-.insight-byline strong, .insight-list > h3 { color: var(--brand); }
-.insight-lead h3 {
-  max-width: 23ch;
-  margin-block: 14px 12px;
-  font: 600 clamp(26px, 2.9vw, 40px)/1.18 Sora, sans-serif;
-  letter-spacing: -.04em;
+.insights-heading .text-link {
+  min-height: 44px;
+  color: var(--brand);
+}
+.insights-editions {
+  list-style: none;
+  padding: 0;
+  margin: 32px 0 0;
+}
+.insights-editions li { border-top: 1px solid var(--line); }
+.insights-row {
+  display: grid;
+  grid-template-columns: clamp(148px, 17vw, 208px) minmax(0, 1fr) 138px;
+  align-items: center;
+  gap: clamp(16px, 3vw, 40px);
+  padding-block: 20px;
+  color: var(--ink);
+}
+.insights-dateline {
+  display: grid;
+  gap: 3px;
+  font-size: 14px;
+  line-height: 1.5;
+  font-variant-numeric: tabular-nums;
+}
+.insights-dateline strong {
+  color: var(--brand);
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+.insights-author { color: var(--soft); font-size: 13px; }
+.insights-row h3 {
+  font-size: clamp(18px, 1.65vw, 23px);
+  line-height: 1.35;
+  text-wrap: pretty;
+}
+.insights-row img {
+  justify-self: end;
+  width: 96px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.insights-latest { padding-block: clamp(28px, 3vw, 44px); }
+.insights-latest h3 {
+  max-width: 32ch;
+  font: 600 clamp(26px, 2.5vw, 36px)/1.18 Sora, sans-serif;
+  letter-spacing: -.035em;
   text-wrap: balance;
 }
-.insight-publisher { font-size: 14px; color: var(--soft); }
-.insight-lead .action { margin-top: 26px; min-height: 44px; }
-.insight-lead .action::after { content: ""; position: absolute; inset: 0; }
-.insight-list {
-  padding: clamp(22px, 2.6vw, 36px);
-  border-radius: var(--panel);
-  background: var(--tint);
-}
-.insight-list > h3 { font-size: 15px; letter-spacing: 0; }
-.insight-list ul { padding: 0; margin: 6px 0; list-style: none; }
-.insight-list li + li { border-top: 1px solid #c4d7e1; }
-.insight-list li a {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: center;
-  gap: 16px;
-  padding-block: 16px;
-}
-.insight-list h4 { font-size: 18px; line-height: 1.35; letter-spacing: -.025em; margin: 0; }
-.insight-list li p { font-size: 13px; line-height: 1.5; color: var(--soft); margin-top: 6px; }
-.insight-list img { width: clamp(64px, 6vw, 88px); height: auto; aspect-ratio: 25/16; object-fit: cover; border-radius: 10px; }
-.insight-list .text-link { min-height: 44px; color: var(--brand); }
-.insight-list li a:is(:hover,:focus-visible) h4, .insight-lead:has(a:is(:hover,:focus-visible)) h3 {
+.insights-read { justify-self: end; min-height: 44px; }
+.insights-row:is(:hover, :focus-visible) h3 {
+  color: var(--brand);
   text-decoration: underline;
   text-decoration-thickness: 1px;
-  text-underline-offset: .15em;
+  text-underline-offset: .16em;
 }
 @media (max-width: 809px) {
-  .insight-spread { grid-template-columns: minmax(0, 1fr); gap: 24px; margin-top: 24px; }
-  .insight-lead { padding-block: 0; }
+  .insights-editions { margin-top: 20px; }
+  .insights-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 8px 16px;
+  }
+  .insights-dateline {
+    grid-column: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 2px 10px;
+  }
+  .insights-row img { grid-column: 2; grid-row: 1 / 3; width: 72px; height: 50px; }
+  .insights-row h3 { grid-column: 1; }
+  .insights-latest { grid-template-columns: 1fr; gap: 12px; padding-block: 24px; }
+  .insights-dateline strong { margin-bottom: 0; }
+  .insights-read { justify-self: start; margin-top: 4px; }
 }
 @media (max-width: 479px) {
-  .insight-list { padding: 20px; }
-  .insight-list li a { gap: 12px; }
-  .insight-list h4 { font-size: 16px; }
-  .insight-list img { width: 60px; }
+  .insights-heading { align-items: flex-start; }
+  .insights-editions { margin-top: 12px; }
+  .insights-row img { width: 56px; height: 44px; }
+  .insights-latest .insights-dateline strong { flex-basis: 100%; }
 }
 .communities small {
   display: block;
