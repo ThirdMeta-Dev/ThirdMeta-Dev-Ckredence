@@ -87,30 +87,34 @@
       "url": "https://play.google.com/store/apps/details?id=com.tvs.chirag"
     }
   ],
+  "pmsRecognition": {
+    "strategy": "Diversified",
+    "source": "Quality, Risk and Consistency Report, published by PMS AIF Report",
+    "rankings": [
+      { "period": "June 2024", "result": "Top 15" },
+      { "period": "March 2024", "result": "Top 10" }
+    ]
+  },
   "awards": [
     {
-      "title": "BSE award for transaction 2022 - 23'",
-      "detail": "Highest online transaction"
+      "period": "2023–24",
+      "title": "Certificate for NFO contribution",
+      "detail": "Awarded by Aditya Birla, TATA, SBI, Sundaram, ICICI, HDFC and Bandhan."
     },
     {
-      "title": "CAMS award for transaction 2022 - 23'",
-      "detail": "Highest online mutual fund on CAMS Surat"
+      "period": "2022–23",
+      "title": "BSE transaction award",
+      "detail": "Highest online transaction."
     },
     {
-      "title": "BSE Star MF: 2020 - 21",
-      "detail": "Highest online mutual fund AUM in Surat in the Veteran IFA Category"
+      "period": "2022–23",
+      "title": "CAMS transaction award",
+      "detail": "Highest online mutual fund on CAMS Surat."
     },
     {
-      "title": "Diversified Investment Approach in Top 15 PMS for June ’24 in India",
-      "detail": "Under Quality, Risk and Consistency Report Published by PMS AIF Report"
-    },
-    {
-      "title": "Diversified Investment Approach in Top 10 PMS for March ’24 in India",
-      "detail": "Under Quality, Risk and Consistency Report Published by PMS AIF Report"
-    },
-    {
-      "title": "Certificate award for NFO contribution - F.Y 2023 - 24'",
-      "detail": "By Aditya Birla, TATA, SBI, Sundaram, ICICI, HDFC, Bandhan"
+      "period": "2020–21",
+      "title": "BSE Star MF",
+      "detail": "Highest online mutual fund AUM in Surat in the Veteran IFA category."
     }
   ],
   "communities": [

@@ -404,7 +404,6 @@ p {
 }
 .services-grid,
 .app-grid,
-.awards,
 .reviews,
 .communities {
   display: grid;
@@ -412,7 +411,6 @@ p {
   margin-top: 32px;
 }
 .services-grid,
-.awards,
 .communities {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -635,7 +633,6 @@ p {
 }
 .strategy,
 .app-grid > *,
-.awards article,
 .communities a,
 .faq-row,
 .reviews figure,
@@ -785,8 +782,7 @@ p {
   gap: 10px;
 }
 .app-stat svg,
-.communities svg,
-.awards svg {
+.communities svg {
   color: var(--brand);
 }
 .downloads {
@@ -925,7 +921,6 @@ p {
   .insights-heading { padding-bottom: 1.5rem; border-bottom: 1px solid var(--insights-rule); }
   .insights-archive { margin-top: -.75rem; }
 }
-.awards small,
 .communities small,
 .reviews small,
 .support small {
@@ -933,20 +928,66 @@ p {
   color: var(--soft);
   font-size: 13px;
 }
-.awards article,
 .communities a {
   display: flex;
   align-items: flex-start;
   gap: 16px;
   padding: 26px;
 }
-.awards h3 {
-  font-size: 19px;
-  margin: 6px 0;
+.recognition-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  align-items: start;
+  gap: clamp(24px, 4vw, 64px);
+  margin-top: 32px;
 }
-.awards p {
-  font-size: 15px;
-  color: var(--soft);
+.recognition-feature {
+  padding: clamp(24px, 3vw, 44px);
+  border-radius: var(--panel);
+  background: var(--panel-background);
+}
+.recognition-kicker, .recognition-year {
+  font-size: 14px;
+  font-weight: 650;
+  color: var(--brand);
+}
+.recognition-feature h3 {
+  margin-top: 8px;
+  font: 600 clamp(24px, 2.3vw, 32px)/1.2 Sora, sans-serif;
+  letter-spacing: -.035em;
+}
+.recognition-ranks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: clamp(24px, 3vw, 40px) 0 20px;
+}
+.recognition-ranks dt { color: var(--soft); font-size: 14px; }
+.recognition-ranks dd {
+  margin: 4px 0 0;
+  font: 600 clamp(28px, 3.1vw, 44px)/1.15 Sora, sans-serif;
+  letter-spacing: -.045em;
+}
+.recognition-source { color: var(--soft); font-size: 14px; line-height: 1.55; }
+.recognition-feature .action { margin-top: 24px; min-height: 44px; }
+.recognition-register > h3 { font-size: 22px; }
+.recognition-register ul { list-style: none; margin: 14px 0 0; padding: 0; }
+.recognition-register li {
+  display: grid;
+  grid-template-columns: 5rem minmax(0, 1fr);
+  gap: 16px;
+  align-items: baseline;
+  padding-block: 16px;
+  border-top: 1px solid var(--line);
+}
+.recognition-year { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.recognition-register h4 { margin: 0; font-size: 18px; line-height: 1.35; }
+.recognition-register p { margin-top: 4px; font-size: 15px; line-height: 1.55; color: var(--soft); }
+@media (max-width: 809px) {
+  .recognition-layout { grid-template-columns: minmax(0, 1fr); gap: 32px; margin-top: 24px; }
+}
+@media (max-width: 479px) {
+  .recognition-register li { grid-template-columns: 1fr; gap: 4px; }
 }
 .communities a {
   align-items: center;
@@ -1220,13 +1261,11 @@ footer p,
   }
   .services-grid,
   .app-grid,
-  .awards,
   .reviews,
   .communities {
     margin-top: 16px;
   }
   .services-grid,
-  .awards,
   .communities {
     grid-template-columns: 1fr;
   }
@@ -1238,7 +1277,6 @@ footer p,
   }
   .services-grid,
   .reviews,
-  .awards,
   .communities,
   .app-grid {
     gap: 16px;
@@ -1408,7 +1446,6 @@ footer p,
   .app-grid {
     --app-card-padding: 18px;
   }
-  .awards article,
   .communities a,
   .faq-row {
     padding-inline: 20px;

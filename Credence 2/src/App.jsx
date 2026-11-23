@@ -349,23 +349,35 @@ function Blogs() {
   );
 }
 function Awards() {
+  const { strategy, source, rankings } = data.pmsRecognition;
+  const approach = data.strategies.find((item) => item.label === strategy);
   return (
-    <section className="section wrap">
-      <Label>Achievements &amp; Awards</Label>
-      <h2>A journey of 35 years</h2>
-      <div className="awards">
-        {data.awards.map((v, i) => (
-          <article key={v.title}>
-            <Icon name="award" size={24} />
-            <div>
-              <small>
-                {i === 3 || i === 4 ? "Achievement" : "Award & recognition"}
-              </small>
-              <h3>{v.title}</h3>
-              <p>{v.detail}</p>
-            </div>
-          </article>
-        ))}
+    <section className="section wrap" id="awards" aria-labelledby="awards-title">
+      <Label>A journey of 35 years</Label>
+      <h2 id="awards-title">Achievements &amp; awards</h2>
+      <div className="recognition-layout">
+        <article className="recognition-feature">
+          <p className="recognition-kicker">PMS rankings in India</p>
+          <h3>{approach.title}</h3>
+          <dl className="recognition-ranks">
+            {rankings.map(({ period, result }) => (
+              <div key={period}><dt>{period}</dt><dd>{result}</dd></div>
+            ))}
+          </dl>
+          <p className="recognition-source">Source: {source}.</p>
+          <Action href={approach.link}>Explore this strategy</Action>
+        </article>
+        <div className="recognition-register">
+          <h3>Industry awards</h3>
+          <ul>
+            {data.awards.map(({ title, detail, period }) => (
+              <li key={title}>
+                <span className="recognition-year">{period}</span>
+                <div><h4>{title}</h4><p>{detail}</p></div>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );
