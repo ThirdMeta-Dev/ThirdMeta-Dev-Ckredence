@@ -307,9 +307,15 @@ p {
   display: none;
 }
 .hero {
-  padding-block: 160px 120px;
+  --hero-nav-bottom: 68px;
+  --hero-intro-gap: 66px;
+  display: flex;
+  flex-direction: column;
+  padding-block: calc(var(--hero-nav-bottom) + var(--hero-intro-gap)) 120px;
 }
 .rank-note {
+  align-self: center;
+  text-align: center;
   display: inline-flex;
   align-items: center;
   gap: 7px;
@@ -325,6 +331,7 @@ p {
 }
 .hero h1 {
   display: grid;
+  text-align: center;
   gap: 12px;
   margin-block: 32px;
   font-size: 64px;
@@ -335,6 +342,7 @@ p {
 .headline-row,
 .inline-unit {
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
@@ -354,9 +362,9 @@ p {
   object-fit: contain;
   background: #0791ce;
 }
-.hero-actions { display:flex; align-items:center; flex-wrap:wrap; gap:16px; }
+.hero-actions { display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:16px; }
 .highlight {
-  position:relative; isolation:isolate; overflow:hidden; margin-top:42px; min-height:236px;
+  position:relative; isolation:isolate; overflow:hidden; margin-top:var(--hero-intro-gap); min-height:236px;
   border-radius:21px; color:#fff;
   background:radial-gradient(ellipse at 88% 105%,#0d97c9 0,transparent 57%),linear-gradient(105deg,#101444,#193878 62%,#0e689b);
 }
@@ -384,7 +392,7 @@ p {
 @keyframes highlight-enter { from { opacity:.25; transform:translateY(5px); } to { opacity:1; transform:none; } }
 @media(max-width:800px) { .highlight-phones { right:8%; left:52%; } }
 @media(max-width:680px) {
-  .highlight { margin-top:30px; min-height:223px; }
+  .highlight { min-height:223px; }
   .highlight-copy { padding:24px 18px; max-width:66%; }
   .highlight-copy .label { font-size:10px; letter-spacing:.075em; }
   .highlight-copy h2 { font-size:28px; }
@@ -1145,7 +1153,8 @@ footer p,
     padding-block: 48px;
   }
   .hero {
-    padding-block: 128px 64px;
+    --hero-intro-gap: 48px;
+    padding-bottom: 64px;
   }
   .hero h1 {
     font-size: 41px;
@@ -1217,6 +1226,9 @@ footer p,
   }
 }
 @media (max-width: 599px) {
+  .hero {
+    --hero-nav-bottom: 60px;
+  }
   .header {
     top: 12px;
   }
@@ -1391,6 +1403,9 @@ footer p,
   }
 }
 @media (max-width: 359px) {
+  .hero .brand-token {
+    width: 48px;
+  }
   .blog-story {
     grid-template-columns: 1fr auto;
   }
