@@ -312,35 +312,41 @@ function Blogs() {
     return () => controller.abort();
   }, []);
   return (
-    <section className="section tint" id="blogs" aria-labelledby="blogs-title">
-      <div className="wrap">
-        <Label>Blogs</Label>
-        <div className="section-head">
-          <h2 id="blogs-title">Latest market insights</h2>
-          <a className="text-link" href={site + "/our-resources"}>
-            View all blogs <Icon name="external" />
+    <section className="market-journal" id="blogs" aria-labelledby="blogs-title">
+      <div className="journal-container">
+        <header className="journal-heading">
+          <div>
+            <p className="journal-label">Blogs</p>
+            <h2 id="blogs-title">Latest market insights</h2>
+          </div>
+          <a className="journal-archive" href={site + "/our-resources"}>
+            View all blogs <Icon name="external" size={16} />
           </a>
-        </div>
-        <div className="blogs">
-          <a className="blog-lead" href={blogs[0].url} aria-labelledby="blog-lead-title">
-            <span className="lead-label">Latest article</span>
-            <h3 id="blog-lead-title">{blogs[0].title}</h3>
-            <span className="blog-meta">{blogs[0].date} · Ckredence Wealth</span>
-            <span className="action">Read article <Icon name="arrow" size={16} /></span>
-          </a>
-          {blogs.slice(1).map((b) => (
-            <a className="blog-story" href={b.url} key={b.url}>
-              <div className="blog-cover">
-                <img loading="lazy" src={b.image} alt="" />
-              </div>
-              <div className="blog-text">
-                <h3>{b.title}</h3>
-                <span className="blog-meta">{b.date} · Ckredence Wealth</span>
-              </div>
-              <Icon name="external" size={16} />
-            </a>
+        </header>
+        <article className="journal-feature">
+          <div className="journal-dateline">
+            <p className="journal-label">Latest article</p>
+            <p>{blogs[0].date}</p>
+            <p>Ckredence Wealth</p>
+          </div>
+          <div>
+            <h3><a className="journal-lead-link" href={blogs[0].url}>{blogs[0].title}</a></h3>
+            <span className="journal-read" aria-hidden="true">Read article <Icon name="arrow" size={18} /></span>
+          </div>
+        </article>
+        <ul className="journal-index" aria-label="Earlier articles">
+          {blogs.slice(1).map((story) => (
+            <li key={story.url}>
+              <a className="journal-entry" href={story.url}>
+                <div className="journal-dateline">
+                  <p>{story.date}</p><p>Ckredence Wealth</p>
+                </div>
+                <h3>{story.title}</h3>
+                <img loading="lazy" src={story.image} alt="" width="100" height="64" />
+              </a>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );
