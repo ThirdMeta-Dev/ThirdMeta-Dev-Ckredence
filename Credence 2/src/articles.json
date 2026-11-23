@@ -3,7 +3,14 @@
     "title": "PMS Industry Size in India: What the ₹43 Lakh Crore Hides",
     "url": "https://ckredencewealth.com/our-resources/pms-industry-size-india",
     "date": "November 23, 2026",
-    "image": "./media/article-0.svg"
+    "image": "./media/article-0.svg",
+    "preview": {
+      "period": "June 2026",
+      "subject": "Provident funds’ share of discretionary PMS assets in India",
+      "fundAssets": 31.04,
+      "totalAssets": 36.72,
+      "unit": "lakh crore"
+    }
   },
   {
     "title": "Where to Invest Money After Selling a Business in India",

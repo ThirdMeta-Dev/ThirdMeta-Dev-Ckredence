@@ -313,35 +313,54 @@ function Blogs() {
       .catch(() => {});
     return () => controller.abort();
   }, []);
+  const [lead, ...earlier] = blogs;
+  const preview = articles.find((story) => story.url === lead.url)?.preview;
+  const share = preview && (100 * preview.fundAssets / preview.totalAssets).toFixed(1);
+
   return (
     <section className="section wrap" id="blogs" aria-labelledby="blogs-title">
       <Label>Blogs</Label>
-      <header className="section-head insights-heading">
+      <div className="section-head market-heading">
         <h2 id="blogs-title">Latest market insights</h2>
-        <a className="text-link" href={site + "/our-resources"}>
-          View all blogs <Icon name="external" size={16} />
-        </a>
-      </header>
-      <ol className="insights-editions" aria-label="Articles, newest first">
-        {blogs.map((story, index) => (
-          <li key={story.url}>
-            <a className={index === 0 ? "insights-row insights-latest" : "insights-row"}
-              href={story.url} aria-labelledby={`insight-title-${index}`} aria-describedby={`insight-date-${index}`}>
-              <div className="insights-dateline" id={`insight-date-${index}`}>
-                {index === 0 && <strong>Latest article</strong>}
-                <span>{story.date}</span>
-                <span className="insights-author">Ckredence Wealth</span>
-              </div>
-              <h3 id={`insight-title-${index}`}>{story.title}</h3>
-              {index === 0 ? (
-                <span className="action insights-read">Read article <Icon name="arrow" size={16} /></span>
-              ) : (
-                <img src={story.image} alt="" width="96" height="60" loading="lazy" />
-              )}
-            </a>
-          </li>
-        ))}
-      </ol>
+        <a className="text-link" href={site + "/our-resources"}>View all blogs <Icon name="external" size={16} /></a>
+      </div>
+
+      <article className="market-lead">
+        <div className="market-lead-copy">
+          <p className="market-kicker">Latest article</p>
+          <h3>{lead.title}</h3>
+          <p className="market-credit">{lead.date} · Ckredence Wealth</p>
+          <a className="action" href={lead.url} aria-label={`Read article: ${lead.title}`}>Read article <Icon name="arrow" size={16} /></a>
+        </div>
+        {preview ? (
+          <figure className="market-figure">
+            <figcaption>{preview.subject}</figcaption>
+            <div className="market-measure"><strong>{share}%</strong><span>{preview.period}</span></div>
+            <div className="market-bar" aria-hidden="true"><span style={{ width: share + "%" }} /></div>
+            <p>₹{preview.fundAssets} lakh crore of ₹{preview.totalAssets} {preview.unit}</p>
+          </figure>
+        ) : (
+          <img className="market-cover" src={lead.image} alt="" />
+        )}
+      </article>
+
+      <div className="market-backlist">
+        <h3>Earlier articles</h3>
+        <ul>
+          {earlier.map((story) => (
+            <li key={story.url}>
+              <a href={story.url}>
+                <img src={story.image} loading="lazy" alt="" width="84" height="56" />
+                <div>
+                  <h4>{story.title}</h4>
+                  <p className="market-credit">{story.date} · Ckredence Wealth</p>
+                </div>
+                <Icon name="external" size={16} />
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
     </section>
   );
 }
