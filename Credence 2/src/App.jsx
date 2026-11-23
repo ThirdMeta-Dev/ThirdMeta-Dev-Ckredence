@@ -95,7 +95,7 @@ function Strategies() {
       const travel = Math.max(1, titleSpace);
       // Keep the scroll track stationary as the heading and cards move inside it.
       const inSection = bounds.top <= stickyTop && bounds.bottom > stickyTop;
-      compact = inSection ? Math.max(0, Math.min(1, compact + (previousY - y) / travel)) : 0;
+      compact = inSection ? Math.max(0, Math.min(1, compact + (y - previousY) / travel)) : 0;
       previousY = y;
       const entrance = Math.max(0, Math.min(1, (stickyTop - bounds.top) / travel));
       const progress = Math.min(compact, entrance);
