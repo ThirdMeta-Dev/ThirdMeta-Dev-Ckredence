@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import data from "./content.json";
 import { Action, Icon, Label, Steps, site, contact } from "./ui.jsx";
 
@@ -84,35 +84,57 @@ export function Faq() {
 }
 export function Reviews() {
   const [index, setIndex] = useState(0);
+  const rail = useRef(null);
+  const touch = useRef(null);
   const count = data.reviews.length;
+  const move = (by) => setIndex((current) => (current + by + count) % count);
+
+  useEffect(() => {
+    const strip = rail.current;
+    const selected = strip.children[index];
+    strip.scrollTo({
+      left: selected.offsetLeft - (strip.clientWidth - selected.offsetWidth) / 2,
+      behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth",
+    });
+  }, [index]);
+
+  function onKey(event) {
+    if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+    event.preventDefault();
+    move(event.key === "ArrowLeft" ? -1 : 1);
+  }
+
+  function finishSwipe(event) {
+    const start = touch.current;
+    touch.current = null;
+    if (!start || !event.changedTouches.length) return;
+    const end = event.changedTouches[0];
+    const dx = end.clientX - start.clientX;
+    if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(end.clientY - start.clientY)) {
+      move(dx < 0 ? 1 : -1);
+    }
+  }
+
   return (
-    <section className="section tint">
-      <div className="wrap">
-        <Label>Testimonials</Label>
-        <div className="section-head">
-          <h2>What our clients say</h2>
-          <Steps
-            label="review"
-            prev={() => setIndex((index + count - 1) % count)}
-            next={() => setIndex((index + 1) % count)}
-          />
-        </div>
-        <div className="reviews" aria-live="polite">
-          {[0, 1, 2].map((offset) => {
-            const item = data.reviews[(index + offset) % count];
+    <section className="section client-reviews" id="testimonials" aria-labelledby="reviews-heading" aria-roledescription="carousel">
+      <div className="review-wrap">
+        <h2 id="reviews-heading">What our clients say</h2>
+        <div className="review-stage" tabIndex={0} role="group" aria-label="Client reviews. Use left and right arrow keys to browse."
+          onKeyDown={onKey}
+          onTouchStart={(event) => { touch.current = event.touches.length === 1 ? event.touches[0] : null; }}
+          onTouchEnd={finishSwipe} onTouchCancel={() => { touch.current = null; }}>
+          {data.reviews.map((item, i) => {
+            const half = Math.floor(count / 2);
+            const offset = (i - index + count + half) % count - half;
             return (
-              <figure key={item.name}>
-                <span className="quote" aria-hidden="true">
-                  “
-                </span>
+              <figure className="review-slide" key={item.name} aria-hidden={offset !== 0}
+                data-side={Math.sign(offset)} style={{ "--slide-offset": offset, visibility: Math.abs(offset) > 2 ? "hidden" : undefined }}>
+                <span className="review-quote" aria-hidden="true">“</span>
                 <blockquote>{item.text.slice(1, -2).join(" ")}</blockquote>
                 <figcaption>
-                  {item.image ? (
-                    <img loading="lazy" src={item.image} alt="" />
-                  ) : (
-                    <span className="initial">{item.name[0]}</span>
-                  )}
-                  <span>
+                  {item.image ? <img src={item.image} alt="" width="48" height="48" loading="lazy" /> : <span>{item.name[0]}</span>}
+                  <span className="review-source" aria-hidden="true">G</span>
+                  <span className="review-credit">
                     <strong>{item.name}</strong>
                     <small>Google review · {item.text[0]}</small>
                   </span>
@@ -120,6 +142,17 @@ export function Reviews() {
               </figure>
             );
           })}
+        </div>
+        <div className="review-controls" onKeyDown={onKey}>
+          <Steps label="review" prev={() => move(-1)} next={() => move(1)} />
+        </div>
+        <p className="review-status" role="status">{`Review ${index + 1} of ${count}: ${data.reviews[index].name}. ${data.reviews[index].text.slice(1, -2).join(" ")}`}</p>
+        <div className="review-directory" ref={rail} role="group" aria-label="Choose a client review">
+          {data.reviews.map((item, i) => (
+            <button key={item.name} type="button" aria-pressed={i === index} onClick={() => setIndex(i)}>
+              {item.name}
+            </button>
+          ))}
         </div>
       </div>
     </section>
