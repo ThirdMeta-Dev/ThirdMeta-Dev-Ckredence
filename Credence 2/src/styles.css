@@ -670,12 +670,19 @@ p {
 .stats {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
   padding-bottom: 80px;
 }
 .stats > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 4px;
   padding: 16px 12px;
-  border-left: 1px solid #c9cdd6;
+}
+.stats > div + div {
+  border-inline-start: 1px solid #c9cdd6;
 }
 .stats strong,
 .app-stat strong {
@@ -1466,8 +1473,13 @@ footer p,
     padding: 10px 12px;
   }
   .stats {
-    grid-template-columns: 1fr 1fr;
-    gap: 18px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .stats > div:nth-child(odd) {
+    border-inline-start: 0;
+  }
+  .stats > div:nth-child(n + 3) {
+    border-top: 1px solid #c9cdd6;
   }
   .manager-section {
     --portrait-space: clamp(165px, 45vw, 224px);

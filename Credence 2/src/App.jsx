@@ -211,7 +211,7 @@ function Strategies() {
 }
 function Statistics() {
   return (
-    <section className="stats wrap" aria-label="PMS key statistics">
+    <section className="stats wrap" id="pms-metrics" aria-label="PMS key statistics">
       {[
         ["₹900+ Cr", "Total PMS AUM"],
         ["550", "Clients"],
