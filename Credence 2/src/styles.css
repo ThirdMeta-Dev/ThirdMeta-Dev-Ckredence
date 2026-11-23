@@ -1019,7 +1019,10 @@ p {
 .faq-row a {
   text-decoration: underline;
 }
-.client-reviews { background: var(--canvas); }
+.client-reviews {
+  background: var(--canvas);
+  border-radius: 30px;
+}
 .review-wrap {
   width: min(1000px, 92%);
   margin-inline: auto;
