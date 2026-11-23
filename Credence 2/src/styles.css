@@ -566,18 +566,10 @@ p {
   z-index: 3;
   padding: 8px 0 18px;
   text-align: center;
-  background: white;
   transform: translateY(calc(0px - var(--approach-collapse, 0px)));
 }
 .approach-intro {
   opacity: var(--approach-title-opacity, 1);
-}
-.approach-heading::before {
-  content: "";
-  position: absolute;
-  inset: calc(-1 * var(--approach-top)) 0 100%;
-  background: white;
-  pointer-events: none;
 }
 .approach-step {
   min-height: calc(100svh - var(--approach-top) - var(--approach-heading-height, 175px));
