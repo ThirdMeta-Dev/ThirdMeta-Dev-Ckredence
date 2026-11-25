@@ -319,47 +319,46 @@ function Blogs() {
 
   return (
     <section className="section wrap" id="blogs" aria-labelledby="blogs-title">
-      <Label>Blogs</Label>
-      <div className="section-head market-heading">
+      <header>
+        <Label>Blogs</Label>
         <h2 id="blogs-title">Latest market insights</h2>
-        <a className="text-link" href={site + "/our-resources"}>View all blogs <Icon name="external" size={16} /></a>
-      </div>
-
-      <article className="market-lead">
-        <div className="market-lead-copy">
+      </header>
+      <div className="market-layout">
+        <article className="market-lead">
           <p className="market-kicker">Latest article</p>
           <h3>{lead.title}</h3>
           <p className="market-credit">{lead.date} · Ckredence Wealth</p>
+          {preview ? (
+            <figure className="market-evidence">
+              <strong>{share}%</strong>
+              <figcaption>
+                {preview.subject}
+                <small>₹{preview.fundAssets} {preview.unit} of ₹{preview.totalAssets} {preview.unit} · {preview.period}</small>
+              </figcaption>
+            </figure>
+          ) : (
+            <img className="market-cover" src={lead.image} alt="" />
+          )}
           <a className="action" href={lead.url} aria-label={`Read article: ${lead.title}`}>Read article <Icon name="arrow" size={16} /></a>
-        </div>
-        {preview ? (
-          <figure className="market-figure">
-            <figcaption>{preview.subject}</figcaption>
-            <div className="market-measure"><strong>{share}%</strong><span>{preview.period}</span></div>
-            <div className="market-bar" aria-hidden="true"><span style={{ width: share + "%" }} /></div>
-            <p>₹{preview.fundAssets} lakh crore of ₹{preview.totalAssets} {preview.unit}</p>
-          </figure>
-        ) : (
-          <img className="market-cover" src={lead.image} alt="" />
-        )}
-      </article>
+        </article>
 
-      <div className="market-backlist">
-        <h3>Earlier articles</h3>
-        <ul>
-          {earlier.map((story) => (
-            <li key={story.url}>
-              <a href={story.url}>
-                <img src={story.image} loading="lazy" alt="" width="84" height="56" />
-                <div>
-                  <h4>{story.title}</h4>
-                  <p className="market-credit">{story.date} · Ckredence Wealth</p>
-                </div>
-                <Icon name="external" size={16} />
-              </a>
-            </li>
-          ))}
-        </ul>
+        <section className="market-backlist" aria-labelledby="earlier-articles">
+          <h3 id="earlier-articles">Earlier articles</h3>
+          <ul>
+            {earlier.map((story) => (
+              <li key={story.url}>
+                <a href={story.url}>
+                  <div>
+                    <h4>{story.title}</h4>
+                    <p className="market-credit">{story.date} · Ckredence Wealth</p>
+                  </div>
+                  <img src={story.image} loading="lazy" alt="" width="84" height="56" />
+                </a>
+              </li>
+            ))}
+          </ul>
+          <a className="text-link" href={site + "/our-resources"}>View all blogs <Icon name="external" size={16} /></a>
+        </section>
       </div>
     </section>
   );
