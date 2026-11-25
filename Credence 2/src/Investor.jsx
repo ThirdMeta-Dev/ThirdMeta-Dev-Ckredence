@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import data from "./content.json";
-import { Action, Icon, Label, Steps, site, contact } from "./ui.jsx";
+import { Icon, Label, Steps, site, contact } from "./ui.jsx";
 
 export function Community() {
   return (
@@ -29,25 +29,30 @@ export function Community() {
 export function Faq() {
   const [more, setMore] = useState(false);
   const [active, setActive] = useState(0);
-  const questions = more ? data.faq : data.faq.slice(0, 7);
+  const firstAdditional = useRef(null);
+  const initialCount = 7;
+  const questions = more ? data.faq : data.faq.slice(0, initialCount);
+  useEffect(() => {
+    if (more) firstAdditional.current?.focus();
+  }, [more]);
   return (
-    <section className="section wrap faq">
-      <div>
+    <section className="section wrap faq" id="faqs" aria-labelledby="faq-heading">
+      <header>
         <Label>Investor information</Label>
-        <h2>General FAQs</h2>
-        <Action href={contact}>Ask a question</Action>
-      </div>
-      <div>
+        <h2 id="faq-heading">General FAQs</h2>
+      </header>
+      <div className="faq-list" id="faq-list">
         {questions.map((item, i) => (
-          <article className="faq-row" key={item.q}>
+          <article className={active === i ? "faq-row is-open" : "faq-row"} key={i}>
             <h3>
               <button
+                ref={i === initialCount ? firstAdditional : null}
                 aria-expanded={active === i}
                 aria-controls={"answer-" + i}
                 onClick={() => setActive(active === i ? -1 : i)}
               >
-                {item.q}
-                <span>{active === i ? "−" : "+"}</span>
+                <span>{item.q}</span>
+                <span className="faq-toggle" aria-hidden="true">{active === i ? "−" : "+"}</span>
               </button>
             </h3>
             <div id={"answer-" + i} hidden={active !== i}>
@@ -69,15 +74,20 @@ export function Faq() {
             </div>
           </article>
         ))}
-        <button
+      </div>
+      <div className="faq-actions">
+        {data.faq.length > initialCount && <button
           className="outline"
+          aria-controls="faq-list"
+          aria-expanded={more}
           onClick={() => {
             setMore(!more);
-            if (more && active >= 7) setActive(-1);
+            if (more && active >= initialCount) setActive(-1);
           }}
         >
-          {more ? "Show fewer" : "Show more"}
-        </button>
+          {more ? "Show fewer questions" : `Show ${data.faq.length - initialCount} more questions`}
+        </button>}
+        <a className="text-link" href={contact}>Ask a question <Icon name="external" size={16} /></a>
       </div>
     </section>
   );

@@ -625,8 +625,7 @@ p {
 }
 .strategy,
 .app-grid > *,
-.communities a,
-.faq-row {
+.communities a {
   border-radius: var(--panel);
   background: var(--panel-background);
 }
@@ -915,53 +914,57 @@ p {
   margin-top: 4px;
 }
 .faq {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  align-items: start;
-  gap: 32px;
+  max-width: 920px;
 }
-.faq .action {
-  margin-top: 24px;
+.faq-list { margin-top: 32px; }
+.faq-row { padding-inline: clamp(16px, 2.4vw, 32px); }
+.faq-row + .faq-row { border-top: 1px solid var(--line); }
+.faq-row.is-open {
+  border-radius: var(--panel);
+  background: var(--panel-background);
 }
-.faq-row {
-  padding: 0 24px 0 32px;
-  margin-bottom: 24px;
-}
-.faq-row h3 {
-  font-size: 16px;
-}
+.faq-row.is-open, .faq-row.is-open + .faq-row { border-color: transparent; }
 .faq-row button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  gap: 16px;
   width: 100%;
-  min-height: 76px;
+  min-height: 60px;
+  padding: 18px 0;
   text-align: left;
-  padding: 17px 0;
-  font:
-    650 16px/1.45 "Plus Jakarta Sans",
-    sans-serif;
+  font: 600 clamp(16px, 1.35vw, 19px)/1.45 "Plus Jakarta Sans", sans-serif;
+  letter-spacing: -.02em;
+  scroll-margin-block-start: 90px;
 }
-.faq-row button span {
-  display: grid;
-  place-items: center;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: var(--ink);
-  color: white;
-  flex: none;
-}
+.faq-row button:hover { color: var(--brand); }
+.faq-toggle { flex: none; font-size: 22px; line-height: 1; color: var(--brand); }
+.faq-row.is-open button { font-weight: 700; }
 .faq-row p {
-  padding: 0 34px 24px 0;
+  max-width: 70ch;
+  padding-bottom: 24px;
   white-space: pre-line;
-  color: var(--soft);
-  font-size: 15px;
+  color: #394655;
+  font-size: 16px;
+  line-height: 1.65;
   overflow-wrap: anywhere;
 }
-.faq-row a {
-  text-decoration: underline;
+.faq-row a { color: var(--brand); text-decoration: underline; }
+.faq-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin-top: 16px;
+  padding-inline: clamp(16px, 2.4vw, 32px);
+}
+.faq-actions > * { min-height: 44px; }
+.faq-actions .text-link { color: var(--brand); }
+@media (max-width: 599px) {
+  .faq-list { margin-top: 20px; }
+  .faq-row button { padding-block: 15px; }
+  .faq-actions { justify-content: flex-start; }
 }
 .client-reviews {
   background: linear-gradient(to bottom, var(--panel-background), #fff);
@@ -1315,12 +1318,6 @@ footer p,
   .foot-grid {
     grid-template-columns: 1fr 1fr;
   }
-  .faq {
-    grid-template-columns: 1fr;
-  }
-  .faq-row {
-    margin-bottom: 16px;
-  }
   .hero-actions {
     gap: 10px;
   }
@@ -1457,8 +1454,7 @@ footer p,
   .app-grid {
     --app-card-padding: 18px;
   }
-  .communities a,
-  .faq-row {
+  .communities a {
     padding-inline: 20px;
   }
   .footer-brand,
