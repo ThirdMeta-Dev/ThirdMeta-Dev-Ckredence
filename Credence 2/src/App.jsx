@@ -319,45 +319,53 @@ function Blogs() {
 
   return (
     <section className="section wrap" id="blogs" aria-labelledby="blogs-title">
-      <header>
-        <Label>Blogs</Label>
-        <h2 id="blogs-title">Latest market insights</h2>
+      <header className="market-header">
+        <div>
+          <Label>Blogs</Label>
+          <h2 id="blogs-title">Latest market insights</h2>
+        </div>
+        <a className="text-link" href={site + "/our-resources"}>View all blogs <Icon name="external" size={16} /></a>
       </header>
-      <div className="market-layout">
-        <article className="market-lead">
-          <p className="market-kicker">Latest article</p>
-          <h3>{lead.title}</h3>
-          <p className="market-credit">{lead.date} · Ckredence Wealth</p>
-          {preview ? (
-            <figure className="market-evidence">
-              <strong>{share}%</strong>
-              <figcaption>
-                {preview.subject}
-                <small>₹{preview.fundAssets} {preview.unit} of ₹{preview.totalAssets} {preview.unit} · {preview.period}</small>
-              </figcaption>
-            </figure>
-          ) : (
-            <img className="market-cover" src={lead.image} alt="" />
-          )}
-          <a className="action" href={lead.url} aria-label={`Read article: ${lead.title}`}>Read article <Icon name="arrow" size={16} /></a>
+
+      <div className="market-editions">
+        <article className="market-lead market-entry">
+          <div className="market-date">
+            <p className="market-kicker">Latest article</p>
+            <p>{lead.date}</p>
+            <small>Ckredence Wealth</small>
+          </div>
+          <div className="market-story">
+            <h3>{lead.title}</h3>
+            {preview ? (
+              <figure className="market-evidence">
+                <figcaption>{preview.subject}: <strong>{share}%</strong></figcaption>
+                <p>₹{preview.fundAssets} {preview.unit} of ₹{preview.totalAssets} {preview.unit} · {preview.period}</p>
+              </figure>
+            ) : (
+              <img className="market-cover" src={lead.image} alt="" />
+            )}
+            <a className="action" href={lead.url} aria-label={`Read article: ${lead.title}`}>Read article <Icon name="arrow" size={16} /></a>
+          </div>
         </article>
 
-        <section className="market-backlist" aria-labelledby="earlier-articles">
+        <section className="market-archive" aria-labelledby="earlier-articles">
           <h3 id="earlier-articles">Earlier articles</h3>
           <ul>
             {earlier.map((story) => (
               <li key={story.url}>
-                <a href={story.url}>
-                  <div>
-                    <h4>{story.title}</h4>
-                    <p className="market-credit">{story.date} · Ckredence Wealth</p>
+                <a className="market-entry" href={story.url}>
+                  <div className="market-date">
+                    <p>{story.date}</p>
+                    <small>Ckredence Wealth</small>
                   </div>
-                  <img src={story.image} loading="lazy" alt="" width="84" height="56" />
+                  <div className="market-archive-story">
+                    <h4>{story.title}</h4>
+                    <img src={story.image} loading="lazy" alt="" width="84" height="56" />
+                  </div>
                 </a>
               </li>
             ))}
           </ul>
-          <a className="text-link" href={site + "/our-resources"}>View all blogs <Icon name="external" size={16} /></a>
         </section>
       </div>
     </section>

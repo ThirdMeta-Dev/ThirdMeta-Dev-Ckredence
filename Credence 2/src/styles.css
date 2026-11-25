@@ -772,78 +772,97 @@ p {
   flex-wrap: wrap;
   margin-top: 14px;
 }
-.market-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1.22fr) minmax(0, 1fr);
-  align-items: start;
-  gap: clamp(32px, 4vw, 64px);
-  margin-top: 32px;
+.market-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px 24px;
 }
-.market-lead {
+.market-header .text-link { min-height: 44px; color: var(--brand); }
+.market-editions {
+  --date-width: clamp(150px, 16vw, 216px);
+  --story-inset: clamp(24px, 3.2vw, 44px);
   position: relative;
-  padding: clamp(24px, 3.2vw, 44px);
-  border-radius: var(--panel);
+  margin-top: 36px;
+}
+.market-editions::before {
+  content: "";
+  position: absolute;
+  inset-block: 10px 32px;
+  left: var(--date-width);
+  width: 1px;
   background: var(--panel-background);
 }
-.market-kicker { color: var(--brand); font-size: 14px; font-weight: 650; }
-.market-lead h3 {
-  margin: 12px 0;
-  font: 600 clamp(26px, 2.4vw, 36px)/1.17 Sora, sans-serif;
+.market-entry {
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--date-width) minmax(0, 1fr);
+  column-gap: var(--story-inset);
+}
+.market-entry::before {
+  content: "";
+  position: absolute;
+  left: var(--date-width);
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #9bbccf;
+  transform: translate(-50%, -50%);
+}
+.market-lead::before { top: 10px; background: var(--brand); width: 9px; height: 9px; }
+.market-date { color: var(--soft); font-size: 14px; padding-right: 12px; }
+.market-date small, .market-evidence p { font-size: 13px; line-height: 1.5; color: var(--soft); }
+.market-kicker, .market-archive > h3 {
+  color: var(--brand);
+  font-size: 14px;
+  font-weight: 650;
+  letter-spacing: 0;
+}
+.market-kicker { margin-bottom: 6px; }
+.market-story h3 {
+  max-width: 33ch;
+  font: 600 clamp(26px, 2.65vw, 38px)/1.16 Sora, sans-serif;
   letter-spacing: -.04em;
   text-wrap: balance;
 }
-.market-credit, .market-evidence small {
-  font-size: 13px;
-  line-height: 1.5;
-  color: var(--soft);
-}
-.market-evidence {
+.market-evidence { margin-block: 16px 20px; }
+.market-evidence figcaption { font-size: 16px; line-height: 1.55; }
+.market-evidence strong { color: var(--brand); white-space: nowrap; }
+.market-evidence p { margin-top: 3px; }
+.market-cover { width: min(100%, 360px); max-height: 180px; margin-block: 16px; border-radius: 12px; object-fit: cover; }
+.market-lead .action { min-height: 44px; }
+.market-lead .action::after { content: ""; position: absolute; inset: 0; }
+.market-archive { margin-top: clamp(28px, 3.2vw, 44px); }
+.market-archive ul { margin: 0; padding: 0; list-style: none; }
+.market-archive .market-entry { align-items: center; }
+.market-archive-story {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 16px;
-  margin-block: 24px;
-  padding-block-start: 20px;
-  border-top: 1px solid #becfd9;
+  min-height: 68px;
+  padding-block: 12px;
 }
-.market-evidence strong {
-  color: var(--brand);
-  font: 600 clamp(24px, 2.1vw, 30px)/1.1 Sora, sans-serif;
-  letter-spacing: -.04em;
-}
-.market-evidence figcaption { font-size: 15px; font-weight: 600; line-height: 1.45; }
-.market-evidence small { display: block; margin-top: 4px; font-weight: 400; }
-.market-cover { margin-block: 24px; width: 100%; max-height: 240px; object-fit: cover; border-radius: 12px; }
-.market-lead .action { min-height: 44px; }
-.market-lead .action::after { content: ""; position: absolute; inset: 0; border-radius: var(--panel); }
-.market-backlist { padding-block: 8px; }
-.market-backlist h3 { font-size: 20px; }
-.market-backlist ul { list-style: none; padding: 0; margin: 4px 0 8px; }
-.market-backlist li + li { border-top: 1px solid var(--line); }
-.market-backlist li a {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: center;
-  gap: clamp(12px, 2vw, 28px);
-  padding-block: 16px;
-}
-.market-backlist img { width: 84px; height: 56px; border-radius: 10px; object-fit: cover; }
-.market-backlist h4 { margin: 0 0 5px; font-size: 18px; line-height: 1.38; letter-spacing: -.025em; }
-.market-backlist .text-link { min-height: 44px; color: var(--brand); }
-.market-backlist a:is(:hover, :focus-visible) h4,
-.market-lead:has(a:is(:hover, :focus-visible)) h3 {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: .16em;
-}
-@media (max-width: 809px) {
-  .market-layout { grid-template-columns: minmax(0, 1fr); gap: 28px; margin-top: 24px; }
-  .market-backlist { padding: 0; }
-}
-@media (max-width: 479px) {
-  .market-lead { padding: 24px 20px; }
-  .market-evidence { flex-direction: column; align-items: start; gap: 6px; margin-block: 18px; }
-  .market-backlist img { width: 60px; height: 44px; }
-  .market-backlist h4 { font-size: 16px; }
+.market-archive li + li .market-archive-story { border-top: 1px solid var(--line); }
+.market-archive-story h4 { margin: 0; font-size: clamp(16px, 1.5vw, 20px); line-height: 1.4; letter-spacing: -.025em; }
+.market-archive-story img { flex: none; width: 72px; height: 46px; border-radius: 9px; object-fit: cover; }
+.market-archive a:is(:hover, :focus-visible) h4,
+.market-lead:has(a:is(:hover, :focus-visible)) h3 { text-decoration: underline 1px; text-underline-offset: .16em; }
+@media (max-width: 679px) {
+  .market-editions { margin-top: 24px; padding-left: 20px; }
+  .market-editions::before { left: 4px; inset-block: 10px 0; }
+  .market-entry { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .market-entry::before { left: -16px; top: 11px; }
+  .market-date { display: flex; align-items: baseline; flex-wrap: wrap; gap: 2px 10px; padding: 0; }
+  .market-date p, .market-date small { font-size: 13px; }
+  .market-kicker { margin: 0; }
+  .market-archive ul { margin-top: 12px; }
+  .market-archive li + li { margin-top: 16px; }
+  .market-archive-story { padding: 0; min-height: 44px; }
+  .market-archive li + li .market-archive-story { border: 0; }
+  .market-archive-story img { width: 58px; height: 44px; }
 }
 .communities small {
   display: block;
