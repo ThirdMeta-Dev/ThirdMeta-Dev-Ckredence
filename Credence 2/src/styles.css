@@ -904,6 +904,12 @@ p {
 .communities a {
   align-items: center;
 }
+.community-heading {
+  text-align: center;
+}
+#whatsapp-community {
+  scroll-margin-top: 100px;
+}
 .communities a svg:last-child {
   margin-left: auto;
 }

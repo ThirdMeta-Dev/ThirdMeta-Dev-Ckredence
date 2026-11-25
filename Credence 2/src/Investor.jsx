@@ -6,8 +6,10 @@ export function Community() {
   return (
     <section className="tint section">
       <div className="wrap">
-        <Label>Join our community</Label>
-        <h2>Regular updates on WhatsApp</h2>
+        <header className="community-heading">
+          <Label>Join our community</Label>
+          <h2 id="whatsapp-community">Regular updates on WhatsApp</h2>
+        </header>
         <div className="communities">
           {data.communities.map((group, i) => (
             <a key={group.url} href={group.url}>
