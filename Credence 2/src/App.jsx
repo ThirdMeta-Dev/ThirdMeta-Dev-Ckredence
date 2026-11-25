@@ -302,6 +302,24 @@ function MobileApp() {
 }
 function Blogs() {
   const [blogs, setBlogs] = useState(articles);
+  const [openStory, setOpenStory] = useState(null);
+  const archive = useRef(null);
+  const firstTouch = useRef(false);
+  useEffect(() => {
+    if (!openStory) return;
+    function dismissOutside(event) {
+      if (!archive.current?.contains(event.target)) setOpenStory(null);
+    }
+    function dismissOnEscape(event) {
+      if (event.key === "Escape") setOpenStory(null);
+    }
+    document.addEventListener("pointerdown", dismissOutside);
+    document.addEventListener("keydown", dismissOnEscape);
+    return () => {
+      document.removeEventListener("pointerdown", dismissOutside);
+      document.removeEventListener("keydown", dismissOnEscape);
+    };
+  }, [openStory]);
   useEffect(() => {
     if (import.meta.env.MODE === "pages") return;
     const controller = new AbortController();
@@ -348,18 +366,50 @@ function Blogs() {
           </div>
         </article>
 
-        <section className="market-archive" aria-labelledby="earlier-articles">
+        <section className="market-archive" ref={archive} aria-labelledby="earlier-articles">
           <h3 id="earlier-articles">Earlier articles</h3>
           <ul>
-            {earlier.map((story) => (
-              <li key={story.url}>
-                <a className="market-entry" href={story.url}>
+            {earlier.map((story, index) => (
+              <li key={story.url} data-open={openStory === story.url}>
+                <a className="market-entry" href={story.url}
+                  aria-label={`Read article: ${story.title}`}
+                  aria-describedby={openStory === story.url && story.summary ? `market-summary-${index}` : undefined}
+                  onPointerEnter={event => {
+                    if (event.pointerType === "mouse") setOpenStory(story.url);
+                  }}
+                  onPointerLeave={event => {
+                    if (event.pointerType === "mouse" && !event.currentTarget.matches(":focus-visible"))
+                      setOpenStory(current => current === story.url ? null : current);
+                  }}
+                  onFocus={event => {
+                    if (event.currentTarget.matches(":focus-visible")) setOpenStory(story.url);
+                  }}
+                  onBlur={() => setOpenStory(current => current === story.url ? null : current)}
+                  onPointerDown={event => {
+                    firstTouch.current = event.pointerType === "touch" && openStory !== story.url;
+                  }}
+                  onClick={event => {
+                    if (firstTouch.current && event.detail > 0) {
+                      event.preventDefault();
+                      setOpenStory(story.url);
+                    }
+                    firstTouch.current = false;
+                  }}
+                >
                   <div className="market-date">
                     <p>{story.date}</p>
                     <small>Ckredence Wealth</small>
                   </div>
                   <div className="market-archive-story">
-                    <h4>{story.title}</h4>
+                    <div className="market-archive-copy">
+                      <h4>{story.title}</h4>
+                      {openStory === story.url && (
+                        <div className="market-preview">
+                          {story.summary && <p id={`market-summary-${index}`}>{story.summary}</p>}
+                          <span className="action">Read article <Icon name="arrow" size={16} /></span>
+                        </div>
+                      )}
+                    </div>
                     <img src={story.image} loading="lazy" alt="" width="84" height="56" />
                   </div>
                 </a>

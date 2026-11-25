@@ -34,11 +34,21 @@ async function refresh() {
       published.some((item) => item.url === url)
     )
       continue;
-    published.push({ title, url, date, image });
+    published.push({ title, url, date, image, summary: saved?.summary });
     if (published.length === 4) break;
   }
   if (published.length !== 4)
     throw new Error("Incomplete published article list");
+  await Promise.all(published.slice(1).filter(story => !story.summary).map(async story => {
+    try {
+      const page = await fetch(story.url, { signal: AbortSignal.timeout(2500) });
+      if (!page.ok) return;
+      const html = load(await page.text());
+      story.summary = html('meta[name="description"]').attr("content")?.trim();
+    } catch {
+      // The article link and cover still work if its description is unavailable.
+    }
+  }));
   articles = published;
   refreshAfter = Date.now() + 60 * 60 * 1000;
 }
