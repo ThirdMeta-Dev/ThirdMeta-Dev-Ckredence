@@ -847,7 +847,7 @@ p {
 }
 .market-archive li + li .market-archive-story { border-top: 1px solid var(--line); }
 .market-archive-story h4 { margin: 0; font-size: clamp(16px, 1.5vw, 20px); line-height: 1.4; letter-spacing: -.025em; }
-.market-archive-story img { flex: none; width: 72px; height: 46px; border-radius: 9px; object-fit: cover; }
+.market-archive-story img { flex: none; width: 64px; height: 36px; border-radius: 4px; object-fit: contain; }
 .market-archive a:is(:hover, :focus-visible) h4,
 .market-lead:has(a:is(:hover, :focus-visible)) h3 { text-decoration: underline 1px; text-underline-offset: .16em; }
 @media (max-width: 679px) {
@@ -862,7 +862,7 @@ p {
   .market-archive li + li { margin-top: 16px; }
   .market-archive-story { padding: 0; min-height: 44px; }
   .market-archive li + li .market-archive-story { border: 0; }
-  .market-archive-story img { width: 58px; height: 44px; }
+  .market-archive-story img { width: 52px; height: 30px; }
 }
 .communities small {
   display: block;
