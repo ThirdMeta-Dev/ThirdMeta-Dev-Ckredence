@@ -137,111 +137,122 @@
   ],
   "faq": [
     {
-      "q": "Who is a Portfolio Manager?",
-      "a": "A portfolio manager is a body corporate, which, pursuant to a contract with a client, advises or directs or undertakes on behalf of the client (whether as a discretionary portfolio manager or otherwise) the management or administration of a portfolio of securities or goods or funds of the client."
+      "q": "What does a portfolio manager do?",
+      "a": "A portfolio manager is a company that advises on or manages your investments under a contract with you."
     },
     {
-      "q": "What is the difference between discretionary portfolio management service and non-discretionary portfolio management service?",
-      "a": "In discretionary portfolio management service, the portfolio manager individually and independently manages the funds and securities of each client in accordance with the needs of the client. Under the non-discretionary portfolio management service, the portfolio manager manages the funds in accordance with the directions of the client."
+      "q": "Who makes the investment decisions?",
+      "a": "With discretionary PMS, your manager chooses investments for you. With non-discretionary PMS, your manager follows your instructions."
     },
     {
-      "q": "What is the procedure of making an application for obtaining registration as a portfolio manager from SEBI?",
-      "a": "As per regulations governing Portfolio Management Services in India, returns cannot be guaranteeFor obtaining registration as a portfolio manager, an applicant is required to make an online application through the SEBI Intermediaries Portal along with a non-refundable application fee of INR1,00,000/- by way of direct credit in the bank account of SEBI through NEFT/RTGS/IMPS or any other mode allowed by RBI. Alternatively, the application fee can also be paid by way of demand draft drawn in favor of ‘Securities and Exchange Board of India’, payable at Mumbai or at the place where respective regional office is located. Any applicant desirous of seeking registration as a Portfolio Manager under PMS Regulations shall file their applications in Form A on the online system at https://siportal.sebi.gov.in"
+      "q": "How do managers register with SEBI?",
+      "a": "Applicants submit Form A through the SEBI Intermediaries Portal and pay the application fee.",
+      "detail": "For obtaining registration as a portfolio manager, an applicant is required to make an online application through the SEBI Intermediaries Portal along with a non-refundable application fee of INR1,00,000/- by way of direct credit in the bank account of SEBI through NEFT/RTGS/IMPS or any other mode allowed by RBI. Alternatively, the application fee can also be paid by way of demand draft drawn in favor of ‘Securities and Exchange Board of India’, payable at Mumbai or at the place where respective regional office is located. Any applicant desirous of seeking registration as a Portfolio Manager under PMS Regulations shall file their applications in Form A on the online system at https://siportal.sebi.gov.in"
     },
     {
-      "q": "What is the minimum Net worth requirement of a portfolio manager?",
-      "a": "The portfolio manager is required to have a minimum networth of INR 5 crore."
+      "q": "What net worth must a manager have?",
+      "a": "A portfolio manager must have a net worth of at least ₹5 crore."
     },
     {
-      "q": "What fees can a portfolio manager charge from its clients for the services rendered by him?",
-      "a": "SEBI (Portfolio Managers) Regulations, 2020 provide that the portfolio manager shall charge a fee as per the agreement with the client for rendering portfolio management services. The fee so charged may be a fixed amount or a performance-based fee or a combination of both. However, no upfront fees shall be charged by the portfolio manager directly or indirectly to the clients.The agreement between the portfolio manager and the client shall, inter-alia, also include the quantum and the manner of fees payable by the client for each activity for which service is rendered by the portfolio manager directly or indirectly."
+      "q": "What fees can a manager charge?",
+      "a": "Your agreement sets the fixed fee, performance fee or both. Managers cannot charge an upfront fee.",
+      "detail": "SEBI (Portfolio Managers) Regulations, 2020 provide that the portfolio manager shall charge a fee as per the agreement with the client for rendering portfolio management services. The fee so charged may be a fixed amount or a performance-based fee or a combination of both. However, no upfront fees shall be charged by the portfolio manager directly or indirectly to the clients.The agreement between the portfolio manager and the client shall, inter-alia, also include the quantum and the manner of fees payable by the client for each activity for which service is rendered by the portfolio manager directly or indirectly."
     },
     {
-      "q": "What are the various securities in which a Portfolio Manager may invest clients’ funds?"
+      "q": "Which securities can my manager buy?"
     },
     {
-      "q": "Whether the funds of clients availing discretionary PMS may be invested in unlisted bonds, which are traded over the counter but settled and reported to the Stock Exchanges?",
+      "q": "Can discretionary PMS buy unlisted bonds traded over the counter?",
+      "a": "No, even if a stock exchange settles the trade and receives the trade report."
+    },
+    {
+      "q": "Can a rights issue take unlisted holdings above 25%?",
+      "a": "In non-discretionary PMS, subscribing to a rights issue that takes unlisted holdings above 25% breaches the limit.",
+      "detail": "An active breach due to investor action, subsequent to corporate actions like subscription to rights issue, which results in breach of 25% limit applicable to Non-Discretionary portfolios, shall be considered as non-compliance. However, a passive breach due to corporate actions like bonus with respect to value of unlisted securities will not be considered as non-compliance."
+    },
+    {
+      "q": "How much do I need to open a PMS account?",
+      "a": "The minimum is ₹50 lakh in funds or securities."
+    },
+    {
+      "q": "How do top-ups work for accounts opened before 21 January 2020?",
+      "a": "When you top up, you must bring the account to at least ₹50 lakh."
+    },
+    {
+      "q": "Can I withdraw part of my portfolio?",
+      "a": "Yes, if your agreement allows it and the remaining investment meets the applicable minimum."
+    },
+    {
+      "q": "How much must remain after a withdrawal?",
+      "a": "Your portfolio must still meet the applicable minimum investment under your agreement."
+    },
+    {
+      "q": "Must I top up if the market value drops below the minimum?",
       "a": "No."
     },
     {
-      "q": "An existing client of Non-Discretionary PMS, who has already invested in certain unlisted securities, wants to subscribe to rights issue of such unlisted securities, which may result in breach of the 25% limit. Is this permitted?",
-      "a": "An active breach due to investor action, subsequent to corporate actions like subscription to rights issue, which results in breach of 25% limit applicable to Non\u0002Discretionary portfolios, shall be considered as non-compliance. However, a passive breach due to corporate actions like bonus with respect to value of unlisted securities will not be considered as non-compliance."
+      "q": "What limits apply to charges from related firms?",
+      "a": "For each service, a manager or related firm can receive up to 20% of annual transaction charges. Rates cannot exceed those paid to unrelated firms.",
+      "detail": "Charges for all transactions in a financial year (Broking, Demat, custody etc.) through self or associates shall be capped at 20% by value per associate (including self) per service. Such limits shall apply separately for demat services, custodian services etc. Further, any charges to self/associate shall not be at rates more than that paid to the non-associates providing the same service. For instance, in case of Broking services, the total amount paid to the associate Stock Broker cannot be more than 20% of the total brokerage paid for trades on behalf of its clients during the year. If Portfolio Manager uses multiple Stock Brokers who are its associates, then transaction through each associate Stock Broker shall be capped at 20% of the total brokerage paid for trades on behalf of its clients during the year."
     },
     {
-      "q": "What is the minimum value of funds or securities that can be accepted by the portfolio manager from the client while opening the PMS account?",
-      "a": "The portfolio manager is required to accept minimum INR 50 Lacs or securities having a minimum worth of INR 50 Lacs from the client."
+      "q": "How many independent providers can a manager use?",
+      "a": "There is no limit on the number of unrelated brokers, depository participants or custodians."
     },
     {
-      "q": "Clients on-boarded by the Portfolio Manager prior to January 21, 2020 were required to bring in minimum of INR 25 Lacs as their initial investment. What is the minimum amount that may be further invested (top-up) by such clients on or after January 21, 2020?",
-      "a": "Clients of Portfolio Managers on-boarded before January 21, 2020 shall, in case of any top-up, comply with the requirement of new minimum investment amount and top up their accounts to minimum INR 50 Lacs."
+      "q": "How is discretionary PMS performance measured?",
+      "a": "Managers report time-weighted returns over the past three years, or since they started if that period is shorter.",
+      "detail": "The performance of a discretionary portfolio manager is calculated using time weighted rate of return (TWRR) method for the immediately preceding three years or period of operation, whichever is lesser. SEBI Circular No. SEBI/HO/IMD/DF1/CIR/P/2020/26 dated February 13, 2020, inter-alia, provides information on reporting of performance by Portfolio Managers and also a client reporting format which includes information on the performance of the client account, portfolio manager and the appropriate benchmark."
     },
     {
-      "q": "Is Partial withdrawal of Portfolio permitted, for the existing clients of Portfolio Managers?",
-      "a": "The client may withdraw partial amounts from his portfolio, in accordance with the terms of the agreement between the client and the Portfolio Manager. However, the value of investment in the portfolio after such withdrawal shall not be less than the applicable minimum investment amount."
+      "q": "What is a time-weighted return?",
+      "a": "It measures investment performance across periods separated by deposits or withdrawals.",
+      "detail": "The time-weighted rate of return breaks up the return on an investment portfolio into separate intervals, based on whether money was added or withdrawn from the fund. The detailed calculation and an indicative illustration in this regard is provided in Annexure 1."
     },
     {
-      "q": "Is Partial withdrawal of Portfolio permitted, for the existing client of Portfolio Managers?",
-      "a": "The client may withdraw partial amounts from his portfolio, by the terms of the agreement between the client and the Portfolio Manager. However, the value of an investment in the portfolio after such withdrawal shall not be less than the applicable minimum investment amount."
+      "q": "How does the high-water mark affect fees?",
+      "a": "Annexure 2 of the published FAQ gives a worked example."
     },
     {
-      "q": "Is the client required to top up his account if the portfolio value falls below the minimum investment amount as provided in the SEBI (Portfolio Managers) Regulations, 2020 as a result of valuation of portfolio?",
+      "q": "What will my portfolio report show?",
+      "a": "At least every three months, your manager reports holdings, trades, income, costs and risks.",
+      "detail": "The portfolio manager shall furnish periodically a report to the client, as per the agreement, but not exceeding a period of three months and such report shall contain the following details, namely: - (a) the composition and the value of the portfolio, description of securities and goods, number of securities, value of each security held in the portfolio, units of goods, value of goods, cash balance and aggregate value of the portfolio as on the date of report; (b) transactions undertaken during the period of report including date of transaction and details of purchases and sales; (c) beneficial interest received during that period in the form of interest, dividend, bonus shares, rights shares, etc; (d) expenses incurred in managing the portfolio of the client; (e) details of risk foreseen by the portfolio manager and the risk relating to the securities recommended by the portfolio manager for investment or disinvestment; (f) default in payment of coupons or any other default in payments in the underlying debt security and downgrading to default rating by the rating agencies, if any; (g) details of commission paid to distributor(s) for the particular client."
+    },
+    {
+      "q": "What must my manager disclose before I sign?",
+      "a": "The disclosure document covers fees, risks, related-party transactions, past performance and audited financial statements.",
+      "detail": "The portfolio manager provides to the client the Disclosure Document prior to entering into an agreement with the client. The Disclosure Document contains the quantum and manner of payment of fees payable by the client for each activity, portfolio risks, complete disclosures in respect of transactions with related parties, the performance of the portfolio manager and the audited financial statements of the portfolio manager for the immediately preceding three years."
+    },
+    {
+      "q": "Does SEBI approve PMS offerings?",
+      "a": "No. Your disclosure document and agreement set out the terms of the service."
+    },
+    {
+      "q": "Does SEBI approve the disclosure document?",
+      "a": "No. SEBI does not certify its accuracy or completeness."
+    },
+    {
+      "q": "What governs my PMS account?",
+      "a": "Your agreement sets the terms and must cover the minimum details required by SEBI.",
+      "detail": "The services of a Portfolio Manager are governed by the agreement between the portfolio manager and the investor. The agreement should cover the minimum details as specified in the SEBI Portfolio Manager Regulations. However, additional requirements can be specified by the Portfolio Manager in the agreement with the client. Hence, an investor is advised to read the agreement carefully before signing it."
+    },
+    {
+      "q": "Is there a lock-in period?",
+      "a": "No. Your agreement may specify an early exit fee.",
+      "detail": "Portfolio managers cannot impose a lock-in on the investment of their clients. However, a portfolio manager can charge applicable exit fees from the client for early exit, as laid down in the agreement subject to provision of SEBI Circular No. SEBI/HO/IMD/DF1/CIR/P/2020/26."
+    },
+    {
+      "q": "Can a manager offer indicative or guaranteed returns?",
       "a": "No."
     },
     {
-      "q": "How are the limits on transactions executed through associates of Portfolio Managers applicable?",
-      "a": "Charges for all transactions in a financial year (Broking, Demat, custody etc.) through self or associates shall be capped at 20% by value per associate (including self) per service. Such limits shall apply separately for demat services, custodian services etc. Further, any charges to self/associate shall not be at rates more than that paid to the non-associates providing the same service. For instance, in case of Broking services, the total amount paid to the associate Stock Broker cannot be more than 20% of the total brokerage paid for trades on behalf of its clients during the year. If Portfolio Manager uses multiple Stock Brokers who are its associates, then transaction through each associate Stock Broker shall be capped at 20% of the total brokerage paid for trades on behalf of its clients during the year."
+      "q": "Where can I find information on portfolio managers?",
+      "a": "SEBI publishes manager listings, regulations, circulars and monthly portfolio manager reports.",
+      "detail": "Investors can log on to the website of SEBI www.sebi.gov.in for information on SEBI regulations and circulars pertaining to portfolio managers. Addresses of the registered portfolio managers are also available on the SEBI website. Information on monthly reports submitted by Portfolio Managers to SEBI can be accessed at https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doPmr=yes."
     },
     {
-      "q": "Is there any restriction on the number of non-associates through which transactions stated in the previous question may be executed?",
-      "a": "There is no restriction imposed on the number of non-associate Stock Brokers, Depository Participants or Custodians that may be engaged by a Portfolio Manager. For e.g. The Portfolio Manager may utilize a single non-associate Stock Broker for executing 100% of the trades on behalf of its clients."
-    },
-    {
-      "q": "On what basis is the performance of the portfolio manager calculated?",
-      "a": "The performance of a discretionary portfolio manager is calculated using time weighted rate of return (TWRR) method for the immediately preceding three years or period of operation, whichever is lesser. SEBI Circular No. SEBI/HO/IMD/DF1/CIR/P/2020/26 dated February 13, 2020, inter\u0002alia, provides information on reporting of performance by Portfolio Managers and also a client reporting format which includes information on the performance of the client account, portfolio manager and the appropriate benchmark."
-    },
-    {
-      "q": "How is TWRR calculated for the purpose of calculating performance of the portfolio manager?",
-      "a": "The time-weighted rate of return breaks up the return on an investment portfolio into separate intervals, based on whether money was added or withdrawn from the fund. The detailed calculation and an indicative illustration in this regard is provided in Annexure 1."
-    },
-    {
-      "q": "How will the performance fee be calculated considering the high watermark principle?",
-      "a": "An indicative illustration for calculation of performance fee, considering high watermark principle, is provided in Annexure 2."
-    },
-    {
-      "q": "What kind of reports can the client expect from the portfolio manager?",
-      "a": "The portfolio manager shall furnish periodically a report to the client, as per the agreement, but not exceeding a period of three months and such report shall contain the following details, namely: - (a) the composition and the value of the portfolio, description of securities and goods, number of securities, value of each security held in the portfolio, units of goods, value of goods, cash balance and aggregate value of the portfolio as on the date of report; (b) transactions undertaken during the period of report including date of transaction and details of purchases and sales; (c) beneficial interest received during that period in the form of interest, dividend, bonus shares, rights shares, etc; (d) expenses incurred in managing the portfolio of the client; (e) details of risk foreseen by the portfolio manager and the risk relating to the securities recommended by the portfolio manager for investment or disinvestment; (f) default in payment of coupons or any other default in payments in the underlying debt security and downgrading to default rating by the rating agencies, if any; (g) details of commission paid to distributor(s) for the particular client."
-    },
-    {
-      "q": "What is the disclosure mechanism of the portfolio managers to their clients?",
-      "a": "The portfolio manager provides to the client the Disclosure Document prior to entering into an agreement with the client. The Disclosure Document contains the quantum and manner of payment of fees payable by the client for each activity, portfolio risks, complete disclosures in respect of transactions with related parties, the performance of the portfolio manager and the audited financial statements of the portfolio manager for the immediately preceding three years."
-    },
-    {
-      "q": "Does SEBI approve any of the services offered by portfolio managers?",
-      "a": "No. SEBI does not approve any of the services offered by the Portfolio Manager. An investor has to invest in the services based on the terms and conditions laid out in the disclosure document and the agreement between the portfolio manager and the investor."
-    },
-    {
-      "q": "Does SEBI approve the disclosure document of the portfolio manager?",
-      "a": "No. SEBI also does not certify the accuracy or adequacy of the contents of the Disclosure Document."
-    },
-    {
-      "q": "What are the rules governing services of a Portfolio Manager?",
-      "a": "The services of a Portfolio Manager are governed by the agreement between the portfolio manager and the investor. The agreement should cover the minimum details as specified in the SEBI Portfolio Manager Regulations. However, additional requirements can be specified by the Portfolio Manager in the agreement with the client. Hence, an investor is advised to read the agreement carefully before signing it."
-    },
-    {
-      "q": "Can a Portfolio Manager impose a lock-in on the investor?",
-      "a": "Portfolio managers cannot impose a lock-in on the investment of their clients. However, a portfolio manager can charge applicable exit fees from the client for early exit, as laid down in the agreement subject to provision of SEBI Circular No. SEBI/HO/IMD/DF1/CIR/P/2020/26."
-    },
-    {
-      "q": "Can a Portfolio Manager offer indicative or guaranteed returns?",
-      "a": "No."
-    },
-    {
-      "q": "Where can an investor look out for information on portfolio managers?",
-      "a": "Investors can log on to the website of SEBI www.sebi.gov.in for information on SEBI regulations and circulars pertaining to portfolio managers. Addresses of the registered portfolio managers are also available on the SEBI website. Information on monthly reports submitted by Portfolio Managers to SEBI can be accessed at https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doPmr=yes."
-    },
-    {
-      "q": "Where can an investor file their complaints?",
-      "a": "Investors would find the name, address and telephone number of the investor relation officer of the portfolio manager (who attends to the investor queries and complaints)"
+      "q": "Where can I file a complaint?",
+      "a": "Contact your portfolio manager’s investor relations officer."
     }
   ],
   "reviews": [

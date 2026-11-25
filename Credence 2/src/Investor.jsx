@@ -56,20 +56,25 @@ export function Faq() {
               </button>
             </h3>
             <div id={"answer-" + i} hidden={active !== i}>
-              {i === 5 ? (
+              {!item.a ? (
                 <p>
                   <a
                     href={
                       site + "/#:~:text=What%20are%20the%20various%20securities"
                     }
                   >
-                    Read Ckredence’s published FAQ
+                    See eligible securities
                   </a>{" "}
-                  or <a href={contact}>ask the team</a> about eligible
-                  securities.
+                  or <a href={contact}>ask the team</a>.
                 </p>
               ) : (
                 <p>{item.a}</p>
+              )}
+              {item.detail && active === i && (
+                <details className="faq-detail">
+                  <summary>Full answer</summary>
+                  <p>{item.detail}</p>
+                </details>
               )}
             </div>
           </article>

@@ -915,7 +915,12 @@ p {
 }
 .faq {
   max-width: 920px;
+  min-height: 85svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+.faq > header { text-align: center; }
 .faq-list { margin-top: 32px; }
 .faq-row { padding-inline: clamp(16px, 2.4vw, 32px); }
 .faq-row + .faq-row { border-top: 1px solid var(--line); }
@@ -925,23 +930,26 @@ p {
 }
 .faq-row.is-open, .faq-row.is-open + .faq-row { border-color: transparent; }
 .faq-row button {
-  display: flex;
+  display: grid;
+  grid-template-columns: 20px minmax(0, 1fr) 20px;
   align-items: center;
-  justify-content: space-between;
-  gap: 16px;
+  gap: 6px;
   width: 100%;
   min-height: 60px;
   padding: 18px 0;
-  text-align: left;
+  text-align: center;
   font: 600 clamp(16px, 1.35vw, 19px)/1.45 "Plus Jakarta Sans", sans-serif;
   letter-spacing: -.02em;
   scroll-margin-block-start: 90px;
 }
+.faq-row button > span:first-child { grid-column: 2; }
 .faq-row button:hover { color: var(--brand); }
 .faq-toggle { flex: none; font-size: 22px; line-height: 1; color: var(--brand); }
 .faq-row.is-open button { font-weight: 700; }
 .faq-row p {
-  max-width: 70ch;
+  max-width: 60ch;
+  margin-inline: auto;
+  text-align: center;
   padding-bottom: 24px;
   white-space: pre-line;
   color: #394655;
@@ -949,11 +957,22 @@ p {
   line-height: 1.65;
   overflow-wrap: anywhere;
 }
+.faq-detail { padding-bottom: 20px; text-align: center; }
+.faq-detail summary {
+  width: fit-content;
+  margin: -12px auto 0;
+  padding: 8px;
+  color: var(--brand);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.faq-detail p { padding: 8px 0 0; text-align: start; }
 .faq-row a { color: var(--brand); text-decoration: underline; }
 .faq-actions {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 8px 20px;
   margin-top: 16px;
@@ -964,7 +983,6 @@ p {
 @media (max-width: 599px) {
   .faq-list { margin-top: 20px; }
   .faq-row button { padding-block: 15px; }
-  .faq-actions { justify-content: flex-start; }
 }
 .client-reviews {
   background: linear-gradient(to bottom, var(--panel-background), #fff);
