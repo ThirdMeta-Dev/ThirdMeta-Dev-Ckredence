@@ -305,13 +305,18 @@ function Blogs() {
   const [openStory, setOpenStory] = useState(null);
   const archive = useRef(null);
   const firstTouch = useRef(false);
+  const hoverTimer = useRef(null);
+  useEffect(() => () => clearTimeout(hoverTimer.current), []);
   useEffect(() => {
     if (!openStory) return;
     function dismissOutside(event) {
       if (!archive.current?.contains(event.target)) setOpenStory(null);
     }
     function dismissOnEscape(event) {
-      if (event.key === "Escape") setOpenStory(null);
+      if (event.key === "Escape") {
+        clearTimeout(hoverTimer.current);
+        setOpenStory(null);
+      }
     }
     document.addEventListener("pointerdown", dismissOutside);
     document.addEventListener("keydown", dismissOnEscape);
@@ -375,11 +380,15 @@ function Blogs() {
                   aria-label={`Read article: ${story.title}`}
                   aria-describedby={openStory === story.url && story.summary ? `market-summary-${index}` : undefined}
                   onPointerEnter={event => {
-                    if (event.pointerType === "mouse") setOpenStory(story.url);
+                    if (event.pointerType !== "mouse") return;
+                    clearTimeout(hoverTimer.current);
+                    hoverTimer.current = setTimeout(() => setOpenStory(story.url), 65);
                   }}
                   onPointerLeave={event => {
+                    clearTimeout(hoverTimer.current);
+                    if (event.relatedTarget instanceof Element && event.relatedTarget.closest(".market-archive .market-entry")) return;
                     if (event.pointerType === "mouse" && !event.currentTarget.matches(":focus-visible"))
-                      setOpenStory(current => current === story.url ? null : current);
+                      setOpenStory(null);
                   }}
                   onFocus={event => {
                     if (event.currentTarget.matches(":focus-visible")) setOpenStory(story.url);
@@ -403,14 +412,15 @@ function Blogs() {
                   <div className="market-archive-story">
                     <div className="market-archive-copy">
                       <h4>{story.title}</h4>
-                      {openStory === story.url && (
-                        <div className="market-preview">
+                      <div className="market-preview" aria-hidden={openStory !== story.url}>
+                        <div className="market-preview-body">
                           {story.summary && <p id={`market-summary-${index}`}>{story.summary}</p>}
                           <span className="action">Read article <Icon name="arrow" size={16} /></span>
+                          <img className="market-mobile-cover" src={story.image} loading="lazy" alt="" width="640" height="358" />
                         </div>
-                      )}
+                      </div>
                     </div>
-                    <img src={story.image} loading="lazy" alt="" width="84" height="56" />
+                    <img className="market-thumbnail" src={story.image} loading="lazy" alt="" width="84" height="56" />
                   </div>
                 </a>
               </li>
